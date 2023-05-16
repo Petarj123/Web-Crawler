@@ -6,10 +6,9 @@ import org.springframework.stereotype.Component;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
+import java.io.UnsupportedEncodingException;
+import java.net.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @Component
@@ -91,8 +90,12 @@ public class RobotstxtParser {
     }
 
     protected String getBaseUrl(String URL) {
+        if (URL == null) {
+            throw new IllegalArgumentException("URL cannot be null");
+        }
+
         try {
-            URL = URL.replace("##", "#");  // replace double hash symbols with a single one
+            URL = URL.replace("##", "#").replace(" ", "+");  // replace double hash symbols with a single one
             URL url = new URI(URL).toURL();
             return url.getProtocol() + "://" + url.getHost() + (url.getPort() == -1 ? "" : ":" + url.getPort()) + "/";
         } catch (URISyntaxException | MalformedURLException e) {
@@ -100,4 +103,14 @@ public class RobotstxtParser {
         }
         return null;
     }
+    public String encodeUrl(String url) throws URISyntaxException {
+        URI uri = new URI(url);
+        String query = uri.getQuery();
+        if (query != null) {
+            String encodedQuery = URLEncoder.encode(query, StandardCharsets.UTF_8);
+            return url.replace(query, encodedQuery).replace(" ", "+");
+        }
+        return url;
+    }
+
 }

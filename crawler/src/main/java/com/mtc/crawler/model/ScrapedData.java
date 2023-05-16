@@ -1,4 +1,4 @@
-package com.mtc.crawler.mode;
+package com.mtc.crawler.model;
 
 import lombok.Builder;
 import lombok.Data;
@@ -13,6 +13,7 @@ import java.util.Date;
 public class ScrapedData {
     @Id
     private String id;
+    private String title;
     private String URL;
     private String text;
     private Date scrapedAt;

@@ -1,8 +1,9 @@
 package com.mtc.crawler.service;
 
-import com.mtc.crawler.mode.ScrapedData;
+
+import com.mtc.crawler.model.ScrapedData;
+import com.mtc.crawler.model.UrlDepth;
 import com.mtc.crawler.repository.ScrapedDataRepository;
-import com.mtc.crawler.service.RobotstxtParser;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.jsoup.Connection;
@@ -22,43 +23,59 @@ public class WebCrawler {
 
     private final RobotstxtParser parser;
     private final Map<String, Map<String, Set<String>>> directivesMap = new HashMap<>();
-    private final NLP nlp;
     private final ScrapedDataRepository scrapedDataRepository;
     @SneakyThrows
-    public void crawl(String url) {
-        String baseUrl = parser.getBaseUrl(url);
+    public void crawl(String url, int maxDepth) {
+        String encodedUrl = url.replace(" ", "+");
+        String baseUrl = parser.getBaseUrl(encodedUrl);
         directivesMap.put(baseUrl, parser.parseRobotstxt(baseUrl));
 
         int delay = parser.crawlDelay(baseUrl + "/robots.txt");
 
-        Queue<String> queue = new LinkedList<>();
+        Queue<UrlDepth> queue = new LinkedList<>();
         Set<String> visitedLinks = new HashSet<>();
-        queue.add(url);
+        queue.add(new UrlDepth(encodedUrl, 0));
 
         while (!queue.isEmpty()) {
+            UrlDepth urlDepth = queue.poll();
+            String currentUrl = urlDepth.getUrl();
+            int currentDepth = urlDepth.getDepth();
+            System.out.println("CURRENT DEPTH : " + currentDepth + " ------------------------------------------------------------------------------------------------");
             Thread.sleep(delay * 1000L);
-            String currentUrl = queue.poll();
             Document document = request(currentUrl, visitedLinks);
             if (document != null) {
+                StringBuilder paragraphText = new StringBuilder();
+                for (Element paragraph : document.select("p")) {
+                    paragraphText.append(paragraph.text()).append("\n");
+                }
+                ScrapedData data = ScrapedData.builder()
+                        .URL(currentUrl)
+                        .title(document.title())
+                        .text(paragraphText.toString())
+                        .scrapedAt(new Date())
+                        .build();
+                System.out.println(data.toString());
+                scrapedDataRepository.save(data);
+
                 for (Element link : document.select("a[href]")) {
                     String nextLink = link.absUrl("href");
-                    if (!visitedLinks.contains(nextLink) && isAllowed(nextLink, directivesMap.get(baseUrl))) {
+
+                    // Check that the link is allowed, has not been visited, and contains url
+                    if (!visitedLinks.contains(nextLink) && isAllowed(nextLink, directivesMap.get(baseUrl)) && nextLink.contains(encodedUrl)) {
                         System.out.println("Allowed Link: " + nextLink);
-                        System.out.println(document.body().text());
-                        ScrapedData data = ScrapedData.builder()
-                                .URL(nextLink)
-                                .text(document.body().text())
-                                .scrapedAt(new Date())
-                                .build();
-                        System.out.println(data.toString());
-                        scrapedDataRepository.save(data);
-                        queue.add(nextLink);
+
+                        // Only add the link to the queue if we are not yet at max depth
+                        if (currentDepth < maxDepth - 1) {
+                            queue.add(new UrlDepth(nextLink, currentDepth + 1));
+                        }
                         visitedLinks.add(nextLink);
                     }
                 }
             }
         }
     }
+
+
     private Document request(String URL, Set<String> visitedLinks){
         try {
             Connection connection = Jsoup.connect(URL).userAgent("SentimentAnalyzerBot/1.0");
