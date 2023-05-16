@@ -1,0 +1,670 @@
+[2023-05-16 17:48:13] ---------- Windows v10.0.19045.0 (C:\Users\Petar\Documents\GitHub\Web-Crawler\ironpdfengine.log) ----------
+[2023-05-16 17:48:13] Using deployment directory 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\'
+[2023-05-16 17:48:13] Creating deployment candidates using root path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\' (download: False)
+[2023-05-16 17:48:13] Creating folder deployments for win-x64
+[2023-05-16 17:48:13] Creating embedded deployments for win-x64
+[2023-05-16 17:48:13] Attempting deployment for 'IronPdf' 2023.3.0.12968 using 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\'
+[2023-05-16 17:48:13] Failed to locate assembly(s) for deployment 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\' at path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\'
+[2023-05-16 17:48:13] IronSoftware.Exceptions.IronSoftwareAssemblyMissingException: Failed to locate 'IronInterop' at 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\'
+   at IronSoftware.Deployment.SmartDeploymentBase.CheckAssemblies(String path)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2023-05-16 17:48:13] Attempting deployment for 'IronPdf' 2023.3.0.12968 using 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64'
+[2023-05-16 17:48:13] Failed to locate assembly(s) for deployment 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64' at path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64'
+[2023-05-16 17:48:13] IronSoftware.Exceptions.IronSoftwareAssemblyMissingException: Failed to locate 'IronInterop' at 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64'
+   at IronSoftware.Deployment.SmartDeploymentBase.CheckAssemblies(String path)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2023-05-16 17:48:13] Attempting deployment for 'IronPdf' 2023.3.0.12968 using 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64'
+[2023-05-16 17:48:13] Failed to locate assembly(s) for deployment 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64' at path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64'
+[2023-05-16 17:48:13] IronSoftware.Exceptions.IronSoftwareAssemblyMissingException: Failed to locate 'IronInterop' at 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64'
+   at IronSoftware.Deployment.SmartDeploymentBase.CheckAssemblies(String path)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2023-05-16 17:48:13] Attempting deployment for 'IronPdf' 2023.3.0.12968 using 'Embedded resource (IronPdf, Version=2023.4.0.4, Culture=neutral, PublicKeyToken=94e1c31412563c75: IronPdf) to path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native''
+[2023-05-16 17:48:13] Successfully found resource with name 'IronPdf.win-x64.zip' in assembly 'IronPdf, Version=2023.4.0.4, Culture=neutral, PublicKeyToken=94e1c31412563c75
+[2023-05-16 17:48:14] Successfully deployed embedded resource 'IronPdf' to 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:48:14] Successfully located 'IronInterop' at 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:48:14] Determining deployment commands for platform 'Windows' v10.0.19045.0
+[2023-05-16 17:48:14] Using deployment instructions for 'default' v
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:48:14] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:48:14] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:48:14] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:48:14] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:48:14] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:48:14] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:48:14] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:48:14] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:48:14] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:48:14] Successfully loaded 'IronInterop' version '2023.3.0.12968' from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:48:14] Successfully deployed 'IronPdf' using 'Embedded resource (IronPdf, Version=2023.4.0.4, Culture=neutral, PublicKeyToken=94e1c31412563c75: IronPdf) to path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native''
+[2023-05-16 17:48:14] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.19045.0, VersionName: , Domain: IronPdfEngine, Thread: , Path: C:\Users\Petar\Documents\GitHub\Web-Crawler
+[2023-05-16 17:48:14] 17:48:14 (18212): Detected operating system windows
+[2023-05-16 17:48:14] 17:48:14 (18212): ~ Chrome renderer v2023.3.0.12968~
+[2023-05-16 17:48:14] 17:48:14 (18212): IsSingleProcess: 0
+[2023-05-16 17:48:14] 17:48:14 (18212): Creating Cef proxy controller
+[2023-05-16 17:48:14] 17:48:14 (18212): Creating Cef interface
+[2023-05-16 17:48:14] 17:48:14 (18212): Created new lifespan events
+[2023-05-16 17:48:14] 17:48:14 (18212): Created new browser process handler
+[2023-05-16 17:48:14] 17:48:14 (18212): Created new load handler
+[2023-05-16 17:48:14] 17:48:14 (18212): Created new render handler
+[2023-05-16 17:48:14] 17:48:14 (18212): Created new render process handler
+[2023-05-16 17:48:14] 17:48:14 (18212): Created new print handler
+[2023-05-16 17:48:14] 17:48:14 (18212): Created new dev tools handler
+[2023-05-16 17:48:14] 17:48:14 (18212): Created new dev tools registration factory
+[2023-05-16 17:48:14] 17:48:14 (18212): Created new lifespan handler
+[2023-05-16 17:48:14] 17:48:14 (18212): Assigning Cef proxy controller events...
+[2023-05-16 17:48:14] 17:48:14 (18212): Assigning Cef proxy controller stream provider...
+[2023-05-16 17:48:14] 17:48:14 (18212): Initializing Cef proxy controller
+[2023-05-16 17:48:14] 17:48:14 (18212): Using subprocess path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe'
+[2023-05-16 17:48:14] 17:48:14 (18212): Using framework path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:48:14] 17:48:14 (18212): Using locales path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales'
+[2023-05-16 17:48:14] 17:48:14 (18212): Using resources path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:48:14] 17:48:14 (18212): Process os_name: 'windows'
+[2023-05-16 17:48:14] 17:48:14 (18212): gpu_mode: '0'
+[2023-05-16 17:48:14] 17:48:14 (18212): Launching Main process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\IronPdfEngine.exe" --browser-subprocess-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests host=127.0.0.1 port=33350 enable_debug=false log_path=ironpdfengine.log programming_language=java license_key=null'
+[2023-05-16 17:48:14] 17:48:14 (14296): Process os_name: 'windows'
+[2023-05-16 17:48:14] 17:48:14 (14296): gpu_mode: '0'
+[2023-05-16 17:48:14] 17:48:14 (14296): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --lang=en-US --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests /prefetch:2'
+[2023-05-16 17:48:15] 17:48:15 (18212): Cef initialization succeeded
+[2023-05-16 17:48:15] 17:48:15 (14296): Cef context initialized
+[2023-05-16 17:48:15] 17:48:15 (14296): Registering custom scheme for rendering raw html
+[2023-05-16 17:48:15] 17:48:15 (14296): Successfully registered custom scheme
+[2023-05-16 17:48:15] 17:48:15 (14296): Cef engine initialization complete
+[2023-05-16 17:48:15] 17:48:15 (14296): Process os_name: 'windows'
+[2023-05-16 17:48:15] 17:48:15 (14296): gpu_mode: '0'
+[2023-05-16 17:48:15] 17:48:15 (14296): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --lang=en-US --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests /prefetch:8'
+[2023-05-16 17:48:15] 17:48:15 (19844): Generating PDF from URL 'https://www.africau.edu/images/default/sample.pdf'
+[2023-05-16 17:48:15] 17:48:15 (19844): BROWSER SETTINGS:
+View: 1024x1280
+Enable Javascript: 1
+Username: 
+
+[2023-05-16 17:48:15] 17:48:15 (19844): RENDER SETTINGS:
+Backgrounds: 1, Emulate Screen: 1, Forms: 1, Landscape : 0
+Scale: 1
+Page Size Type: A4
+Custom Page Size: 210x297
+Actual Page Size: 210x297
+Page Margin Type: 2
+Margin Top: 25, Right: 25, Bottom: 25, Left: 25
+Header Html: 
+Footer Html: 
+Javascript: 
+Autosize Screen: 0, PPI: 96
+Title: 
+First Page Number: 1
+Save Path: 
+Render Delay: 0
+Max Header Height: 200, Max Footer Height : 200
+
+[2023-05-16 17:48:15] 17:48:15 (19844): Created new job group 0 for new document
+[2023-05-16 17:48:15] 17:48:15 (19844): Created job group 0
+[2023-05-16 17:48:15] 17:48:15 (19844): Queuing job 0
+[2023-05-16 17:48:15] 17:48:15 (19844): Checking for browser availability (0/30)
+[2023-05-16 17:48:15] 17:48:15 (19844): Creating new browser after waiting 0 seconds
+[2023-05-16 17:48:15] 17:48:15 (14296): Created browser id 1, 1 exist
+[2023-05-16 17:48:15] 17:48:15 (14296): Browser 1 created and ready for assignment
+[2023-05-16 17:48:15] 17:48:15 (14296): Assigning job 0 to browser 1
+[2023-05-16 17:48:15] 17:48:15 (14296): Processing job for url 'https://www.africau.edu/images/default/sample.pdf' on browser 1
+[2023-05-16 17:48:15] 17:48:15 (14296): Process os_name: 'windows'
+[2023-05-16 17:48:15] 17:48:15 (14296): gpu_mode: '0'
+[2023-05-16 17:48:15] 17:48:15 (14296): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:48:15] 17:48:15 (14296): Process os_name: 'windows'
+[2023-05-16 17:48:15] 17:48:15 (14296): gpu_mode: '0'
+[2023-05-16 17:48:15] 17:48:15 (14296): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:48:15] 17:48:15 (14296): Browser 1 loading state changed to 1 for url ''
+[2023-05-16 17:48:15] 17:48:15 (12764): Received resource request from null for https://www.africau.edu/images/default/sample.pdf on browser 1 (nav: 1, dl: 0)
+[2023-05-16 17:48:15] 17:48:15 (12764): Resolved resource request using default handler
+[2023-05-16 17:48:15] 17:48:15 (14296): Browser process received message: 'OnBrowserCreated'
+[2023-05-16 17:48:15] 17:48:15 (14296): Received message from render process with 0 bytes
+[2023-05-16 17:48:16] 17:48:16 (14296): Browser 1 frame 17179869185 started loading https://www.africau.edu/images/default/sample.pdf
+[2023-05-16 17:48:16] 17:48:16 (14296): Browser 1 status: 
+[2023-05-16 17:48:16] 17:48:16 (14296): Browser 1 frame 17179869188 started loading about:blank
+[2023-05-16 17:48:16] 17:48:16 (14296): Browser 1 frame 17179869188 ended loading about:blank
+[2023-05-16 17:48:16] 17:48:16 (14296): Browser 1 frame 17179869185 ended loading https://www.africau.edu/images/default/sample.pdf
+[2023-05-16 17:48:16] 17:48:16 (14296): Browser 1 loading state changed to 0 for url 'https://www.africau.edu/images/default/sample.pdf'
+[2023-05-16 17:48:16] 17:48:16 (14296): Frame loaded for job 0 on browser 1
+[2023-05-16 17:48:16] 17:48:16 (14296): Found job 0 in group 0 (of 1 groups)
+[2023-05-16 17:48:16] 17:48:16 (14296): Executing dev tools method 'Emulation.setEmulatedMedia' for browser 1
+[2023-05-16 17:48:16] 17:48:16 (14296): Executing dev tools method 'Page.getLayoutMetrics' for browser 1
+[2023-05-16 17:48:16] 17:48:16 (14296): Received dev tools message on browser 1: '{"id":1,"result":{}}' (size: 20)
+[2023-05-16 17:48:16] 17:48:16 (14296): Finished dev tools method on browser 1 (message ID: 1)
+[2023-05-16 17:48:16] 17:48:16 (14296): Process os_name: 'windows'
+[2023-05-16 17:48:16] 17:48:16 (14296): gpu_mode: '0'
+[2023-05-16 17:48:16] 17:48:16 (14296): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --extension-process --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:48:16] 17:48:16 (14296): Received dev tools message on browser 1: '{"id":2,"result":{"layoutViewport":{"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280},"visualViewport":{"offsetX":0,"offsetY":0,"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280,"scale":1,"zoom":1},"contentSize":{"x":0,"y":0,"width":1024,"height":1280},"cssLayoutViewport":{"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280},"cssVisualViewport":{"offsetX":0,"offsetY":0,"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280,"scale":1,"zoom":1},"cssContentSize":{"x":0,"y":0,"width":1024,"height":1280}}}' (size: 536)
+[2023-05-16 17:48:16] 17:48:16 (14296): Finished dev tools method on browser 1 (message ID: 2)
+[2023-05-16 17:48:16] 17:48:16 (14296): Sending DOM-visit process message for browser 1 (job ID: 0)
+[2023-05-16 17:48:16] 17:48:16 (14296): Browser process received message: 'OnDomVisited'
+[2023-05-16 17:48:16] 17:48:16 (14296): Received message from render process with 120 bytes
+[2023-05-16 17:48:16] 17:48:16 (14296): Processed html for browser 1
+[2023-05-16 17:48:16] 17:48:16 (23808): Finished waiting for render delay
+[2023-05-16 17:48:16] 17:48:16 (23808): Scaling content to paper using a scale of 1
+[2023-05-16 17:48:16] 17:48:16 (23808): Printing from browser to 'C:\Users\Petar\AppData\Local\Temp\920B.tmp'
+[2023-05-16 17:48:16] 17:48:16 (14296): Received browser print callback for path 'C:\Users\Petar\AppData\Local\Temp\920B.tmp' (1)
+[2023-05-16 17:48:16] 17:48:16 (14296): Print finished for browser 1(success: 1)
+[2023-05-16 17:48:16] 17:48:16 (14296): Resolving job for browser 1 with 894 bytes
+[2023-05-16 17:48:16] 17:48:16 (14296): PdfDocumentFactory created document 000001FFD82A2220 from 894 bytes
+[2023-05-16 17:48:16] 17:48:16 (14296): Resolving job for browser 1 with 1 page document
+[2023-05-16 17:48:16] 17:48:16 (14296): No document title found
+[2023-05-16 17:48:16] 17:48:16 (14296): Retrieve Html title: 
+[2023-05-16 17:48:16] 17:48:16 (14296): Generating form fields
+[2023-05-16 17:48:16] 17:48:16 (14296): Adding default font for form fields
+[2023-05-16 17:48:16] 17:48:16 (14296): Initializing forms for document
+[2023-05-16 17:48:16] 17:48:16 (14296): Sorting 0 marked fields
+[2023-05-16 17:48:16] 17:48:16 (14296): Adding form fields to 1 pages
+[2023-05-16 17:48:16] 17:48:16 (14296): Generating bytes for document 000001FFD82A2220
+[2023-05-16 17:48:16] 17:48:16 (14296): Successfully generated 1218 bytes for document 000001FFD82A2220
+[2023-05-16 17:48:16] 17:48:16 (14296): PdfDocumentFactory closed document 000001FFD82A2220
+[2023-05-16 17:48:16] 17:48:16 (21624): Closing browser 1
+[2023-05-16 17:48:16] 17:48:16 (14296): Received dev tools message on browser 1: '{"method":"Inspector.detached","params":{"reason":"Render process gone."}}' (size: 74)
+[2023-05-16 17:48:16] 17:48:16 (14296): Destroying browser id 1, 0 remain
+[2023-05-16 17:48:16] 17:48:16 (14296): Browser 1 closed for job 0
+[2023-05-16 17:48:16] 17:48:16 (14296): Found job 0 in group 0 (of 1 groups)
+[2023-05-16 17:48:16] 17:48:16 (14296): Job group 0 finished
+[2023-05-16 17:48:16] 17:48:16 (14296): CefMessagePumpStd::Quit()
+[2023-05-16 17:48:16] 17:48:16 (19844): PdfDocumentFactory created document 000001FFD82A1C00 from 1218 bytes
+[2023-05-16 17:48:16] 17:48:16 (19844): Storing new document 0
+[2023-05-16 17:48:16] Retrieved license key from inline variable
+[2023-05-16 17:48:16] Error 0x01 while validating license key
+[2023-05-16 17:49:52] ---------- Windows v10.0.19045.0 (C:\Users\Petar\Documents\GitHub\Web-Crawler\ironpdfengine.log) ----------
+[2023-05-16 17:49:52] Using deployment directory 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\'
+[2023-05-16 17:49:52] Creating deployment candidates using root path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\' (download: False)
+[2023-05-16 17:49:52] Creating folder deployments for win-x64
+[2023-05-16 17:49:52] Creating embedded deployments for win-x64
+[2023-05-16 17:49:52] Successfully located 'IronInterop' at 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:49:52] Determining deployment commands for platform 'Windows' v10.0.19045.0
+[2023-05-16 17:49:52] Using deployment instructions for 'default' v
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:49:52] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:49:52] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:49:52] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:49:52] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:49:52] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:49:52] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:49:52] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:49:52] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:49:52] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:49:52] Successfully loaded 'IronInterop' version '2023.3.0.12968' from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:49:52] Successfully deployed 'IronPdf' using 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:49:52] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.19045.0, VersionName: , Domain: IronPdfEngine, Thread: , Path: C:\Users\Petar\Documents\GitHub\Web-Crawler
+[2023-05-16 17:49:52] 17:49:52 (20640): Detected operating system windows
+[2023-05-16 17:49:52] 17:49:52 (20640): ~ Chrome renderer v2023.3.0.12968~
+[2023-05-16 17:49:52] 17:49:52 (20640): IsSingleProcess: 0
+[2023-05-16 17:49:52] 17:49:52 (20640): Creating Cef proxy controller
+[2023-05-16 17:49:52] 17:49:52 (20640): Creating Cef interface
+[2023-05-16 17:49:52] 17:49:52 (20640): Created new lifespan events
+[2023-05-16 17:49:52] 17:49:52 (20640): Created new browser process handler
+[2023-05-16 17:49:52] 17:49:52 (20640): Created new load handler
+[2023-05-16 17:49:52] 17:49:52 (20640): Created new render handler
+[2023-05-16 17:49:52] 17:49:52 (20640): Created new render process handler
+[2023-05-16 17:49:52] 17:49:52 (20640): Created new print handler
+[2023-05-16 17:49:52] 17:49:52 (20640): Created new dev tools handler
+[2023-05-16 17:49:52] 17:49:52 (20640): Created new dev tools registration factory
+[2023-05-16 17:49:52] 17:49:52 (20640): Created new lifespan handler
+[2023-05-16 17:49:52] 17:49:52 (20640): Assigning Cef proxy controller events...
+[2023-05-16 17:49:52] 17:49:52 (20640): Assigning Cef proxy controller stream provider...
+[2023-05-16 17:49:52] 17:49:52 (20640): Initializing Cef proxy controller
+[2023-05-16 17:49:52] 17:49:52 (20640): Using subprocess path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe'
+[2023-05-16 17:49:52] 17:49:52 (20640): Using framework path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:49:52] 17:49:52 (20640): Using locales path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales'
+[2023-05-16 17:49:52] 17:49:52 (20640): Using resources path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:49:52] 17:49:52 (20640): Process os_name: 'windows'
+[2023-05-16 17:49:52] 17:49:52 (20640): gpu_mode: '0'
+[2023-05-16 17:49:52] 17:49:52 (20640): Launching Main process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\IronPdfEngine.exe" --browser-subprocess-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests host=127.0.0.1 port=33350 enable_debug=false log_path=ironpdfengine.log programming_language=java license_key=null'
+[2023-05-16 17:49:52] 17:49:52 (19836): Process os_name: 'windows'
+[2023-05-16 17:49:52] 17:49:52 (19836): gpu_mode: '0'
+[2023-05-16 17:49:52] 17:49:52 (19836): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --lang=en-US --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests /prefetch:2'
+[2023-05-16 17:49:52] 17:49:52 (20640): Cef initialization succeeded
+[2023-05-16 17:49:52] 17:49:52 (19836): Cef context initialized
+[2023-05-16 17:49:52] 17:49:52 (19836): Registering custom scheme for rendering raw html
+[2023-05-16 17:49:52] 17:49:52 (19836): Successfully registered custom scheme
+[2023-05-16 17:49:52] 17:49:52 (19836): Cef engine initialization complete
+[2023-05-16 17:49:52] 17:49:52 (19836): Process os_name: 'windows'
+[2023-05-16 17:49:52] 17:49:52 (19836): gpu_mode: '0'
+[2023-05-16 17:49:52] 17:49:52 (19836): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --lang=en-US --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests /prefetch:8'
+[2023-05-16 17:49:53] 17:49:53 (24232): Generating PDF from URL 'https://www.africau.edu/images/default/sample.pdf'
+[2023-05-16 17:49:53] 17:49:53 (24232): BROWSER SETTINGS:
+View: 1024x1280
+Enable Javascript: 1
+Username: 
+
+[2023-05-16 17:49:53] 17:49:53 (24232): RENDER SETTINGS:
+Backgrounds: 1, Emulate Screen: 1, Forms: 1, Landscape : 0
+Scale: 1
+Page Size Type: A4
+Custom Page Size: 210x297
+Actual Page Size: 210x297
+Page Margin Type: 2
+Margin Top: 25, Right: 25, Bottom: 25, Left: 25
+Header Html: 
+Footer Html: 
+Javascript: 
+Autosize Screen: 0, PPI: 96
+Title: 
+First Page Number: 1
+Save Path: 
+Render Delay: 0
+Max Header Height: 200, Max Footer Height : 200
+
+[2023-05-16 17:49:53] 17:49:53 (24232): Created new job group 0 for new document
+[2023-05-16 17:49:53] 17:49:53 (24232): Created job group 0
+[2023-05-16 17:49:53] 17:49:53 (24232): Queuing job 0
+[2023-05-16 17:49:53] 17:49:53 (24232): Checking for browser availability (0/30)
+[2023-05-16 17:49:53] 17:49:53 (24232): Creating new browser after waiting 0 seconds
+[2023-05-16 17:49:53] 17:49:53 (19836): Created browser id 1, 1 exist
+[2023-05-16 17:49:53] 17:49:53 (19836): Browser 1 created and ready for assignment
+[2023-05-16 17:49:53] 17:49:53 (19836): Assigning job 0 to browser 1
+[2023-05-16 17:49:53] 17:49:53 (19836): Processing job for url 'https://www.africau.edu/images/default/sample.pdf' on browser 1
+[2023-05-16 17:49:53] 17:49:53 (19836): Process os_name: 'windows'
+[2023-05-16 17:49:53] 17:49:53 (19836): gpu_mode: '0'
+[2023-05-16 17:49:53] 17:49:53 (19836): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:49:53] 17:49:53 (19836): Process os_name: 'windows'
+[2023-05-16 17:49:53] 17:49:53 (19836): gpu_mode: '0'
+[2023-05-16 17:49:53] 17:49:53 (19836): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:49:53] 17:49:53 (19836): Browser 1 loading state changed to 1 for url ''
+[2023-05-16 17:49:53] 17:49:53 (19568): Received resource request from null for https://www.africau.edu/images/default/sample.pdf on browser 1 (nav: 1, dl: 0)
+[2023-05-16 17:49:53] 17:49:53 (19568): Resolved resource request using default handler
+[2023-05-16 17:49:53] 17:49:53 (19836): Browser process received message: 'OnBrowserCreated'
+[2023-05-16 17:49:53] 17:49:53 (19836): Received message from render process with 0 bytes
+[2023-05-16 17:49:53] 17:49:53 (19836): Browser 1 frame 17179869185 started loading https://www.africau.edu/images/default/sample.pdf
+[2023-05-16 17:49:53] 17:49:53 (19836): Browser 1 status: 
+[2023-05-16 17:49:53] 17:49:53 (19836): Browser 1 frame 17179869188 started loading about:blank
+[2023-05-16 17:49:53] 17:49:53 (19836): Browser 1 frame 17179869188 ended loading about:blank
+[2023-05-16 17:49:53] 17:49:53 (19836): Browser 1 frame 17179869185 ended loading https://www.africau.edu/images/default/sample.pdf
+[2023-05-16 17:49:53] 17:49:53 (19836): Browser 1 loading state changed to 0 for url 'https://www.africau.edu/images/default/sample.pdf'
+[2023-05-16 17:49:53] 17:49:53 (19836): Frame loaded for job 0 on browser 1
+[2023-05-16 17:49:53] 17:49:53 (19836): Found job 0 in group 0 (of 1 groups)
+[2023-05-16 17:49:53] 17:49:53 (19836): Executing dev tools method 'Emulation.setEmulatedMedia' for browser 1
+[2023-05-16 17:49:53] 17:49:53 (19836): Executing dev tools method 'Page.getLayoutMetrics' for browser 1
+[2023-05-16 17:49:53] 17:49:53 (19836): Received dev tools message on browser 1: '{"id":1,"result":{}}' (size: 20)
+[2023-05-16 17:49:53] 17:49:53 (19836): Finished dev tools method on browser 1 (message ID: 1)
+[2023-05-16 17:49:53] 17:49:53 (19836): Process os_name: 'windows'
+[2023-05-16 17:49:53] 17:49:53 (19836): gpu_mode: '0'
+[2023-05-16 17:49:53] 17:49:53 (19836): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --extension-process --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:49:53] 17:49:53 (19836): Received dev tools message on browser 1: '{"id":2,"result":{"layoutViewport":{"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280},"visualViewport":{"offsetX":0,"offsetY":0,"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280,"scale":1,"zoom":1},"contentSize":{"x":0,"y":0,"width":1024,"height":1280},"cssLayoutViewport":{"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280},"cssVisualViewport":{"offsetX":0,"offsetY":0,"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280,"scale":1,"zoom":1},"cssContentSize":{"x":0,"y":0,"width":1024,"height":1280}}}' (size: 536)
+[2023-05-16 17:49:53] 17:49:53 (19836): Finished dev tools method on browser 1 (message ID: 2)
+[2023-05-16 17:49:53] 17:49:53 (19836): Sending DOM-visit process message for browser 1 (job ID: 0)
+[2023-05-16 17:49:53] 17:49:53 (19836): Browser process received message: 'OnDomVisited'
+[2023-05-16 17:49:53] 17:49:53 (19836): Received message from render process with 120 bytes
+[2023-05-16 17:49:53] 17:49:53 (19836): Processed html for browser 1
+[2023-05-16 17:49:53] 17:49:53 (12188): Finished waiting for render delay
+[2023-05-16 17:49:53] 17:49:53 (12188): Scaling content to paper using a scale of 1
+[2023-05-16 17:49:53] 17:49:53 (12188): Printing from browser to 'C:\Users\Petar\AppData\Local\Temp\FC2.tmp'
+[2023-05-16 17:49:53] 17:49:53 (19836): Received browser print callback for path 'C:\Users\Petar\AppData\Local\Temp\FC2.tmp' (1)
+[2023-05-16 17:49:53] 17:49:53 (19836): Print finished for browser 1(success: 1)
+[2023-05-16 17:49:53] 17:49:53 (19836): Resolving job for browser 1 with 894 bytes
+[2023-05-16 17:49:53] 17:49:53 (19836): PdfDocumentFactory created document 00000216F9478DB0 from 894 bytes
+[2023-05-16 17:49:53] 17:49:53 (19836): Resolving job for browser 1 with 1 page document
+[2023-05-16 17:49:53] 17:49:53 (19836): No document title found
+[2023-05-16 17:49:53] 17:49:53 (19836): Retrieve Html title: 
+[2023-05-16 17:49:53] 17:49:53 (19836): Generating form fields
+[2023-05-16 17:49:53] 17:49:53 (19836): Adding default font for form fields
+[2023-05-16 17:49:53] 17:49:53 (19836): Initializing forms for document
+[2023-05-16 17:49:53] 17:49:53 (19836): Sorting 0 marked fields
+[2023-05-16 17:49:53] 17:49:53 (19836): Adding form fields to 1 pages
+[2023-05-16 17:49:53] 17:49:53 (19836): Generating bytes for document 00000216F9478DB0
+[2023-05-16 17:49:53] 17:49:53 (19836): Successfully generated 1218 bytes for document 00000216F9478DB0
+[2023-05-16 17:49:53] 17:49:53 (19836): PdfDocumentFactory closed document 00000216F9478DB0
+[2023-05-16 17:49:53] 17:49:53 (12988): Closing browser 1
+[2023-05-16 17:49:53] 17:49:53 (19836): Received dev tools message on browser 1: '{"method":"Inspector.detached","params":{"reason":"Render process gone."}}' (size: 74)
+[2023-05-16 17:49:53] 17:49:53 (19836): Destroying browser id 1, 0 remain
+[2023-05-16 17:49:53] 17:49:53 (19836): Browser 1 closed for job 0
+[2023-05-16 17:49:53] 17:49:53 (19836): Found job 0 in group 0 (of 1 groups)
+[2023-05-16 17:49:53] 17:49:53 (19836): Job group 0 finished
+[2023-05-16 17:49:53] 17:49:53 (19836): CefMessagePumpStd::Quit()
+[2023-05-16 17:49:53] 17:49:53 (24232): PdfDocumentFactory created document 00000216FE189830 from 1218 bytes
+[2023-05-16 17:49:53] 17:49:53 (24232): Storing new document 0
+[2023-05-16 17:50:06] ---------- Windows v10.0.19045.0 (C:\Users\Petar\Documents\GitHub\Web-Crawler\ironpdfengine.log) ----------
+[2023-05-16 17:50:06] Using deployment directory 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\'
+[2023-05-16 17:50:06] Creating deployment candidates using root path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\' (download: False)
+[2023-05-16 17:50:06] Creating folder deployments for win-x64
+[2023-05-16 17:50:06] Creating embedded deployments for win-x64
+[2023-05-16 17:50:06] Successfully located 'IronInterop' at 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:50:06] Determining deployment commands for platform 'Windows' v10.0.19045.0
+[2023-05-16 17:50:06] Using deployment instructions for 'default' v
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:50:06] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:50:06] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:50:06] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:50:06] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:50:06] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:50:06] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:50:06] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:50:06] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:50:06] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:50:06] Successfully loaded 'IronInterop' version '2023.3.0.12968' from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:50:06] Successfully deployed 'IronPdf' using 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:50:06] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.19045.0, VersionName: , Domain: IronPdfEngine, Thread: , Path: C:\Users\Petar\Documents\GitHub\Web-Crawler
+[2023-05-16 17:50:06] 17:50:06 (15864): Detected operating system windows
+[2023-05-16 17:50:06] 17:50:06 (15864): ~ Chrome renderer v2023.3.0.12968~
+[2023-05-16 17:50:06] 17:50:06 (15864): IsSingleProcess: 0
+[2023-05-16 17:50:06] 17:50:06 (15864): Creating Cef proxy controller
+[2023-05-16 17:50:06] 17:50:06 (15864): Creating Cef interface
+[2023-05-16 17:50:06] 17:50:06 (15864): Created new lifespan events
+[2023-05-16 17:50:06] 17:50:06 (15864): Created new browser process handler
+[2023-05-16 17:50:06] 17:50:06 (15864): Created new load handler
+[2023-05-16 17:50:06] 17:50:06 (15864): Created new render handler
+[2023-05-16 17:50:06] 17:50:06 (15864): Created new render process handler
+[2023-05-16 17:50:06] 17:50:06 (15864): Created new print handler
+[2023-05-16 17:50:06] 17:50:06 (15864): Created new dev tools handler
+[2023-05-16 17:50:06] 17:50:06 (15864): Created new dev tools registration factory
+[2023-05-16 17:50:06] 17:50:06 (15864): Created new lifespan handler
+[2023-05-16 17:50:06] 17:50:06 (15864): Assigning Cef proxy controller events...
+[2023-05-16 17:50:06] 17:50:06 (15864): Assigning Cef proxy controller stream provider...
+[2023-05-16 17:50:06] 17:50:06 (15864): Initializing Cef proxy controller
+[2023-05-16 17:50:06] 17:50:06 (15864): Using subprocess path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe'
+[2023-05-16 17:50:06] 17:50:06 (15864): Using framework path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:50:06] 17:50:06 (15864): Using locales path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales'
+[2023-05-16 17:50:06] 17:50:06 (15864): Using resources path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:50:06] 17:50:06 (15864): Process os_name: 'windows'
+[2023-05-16 17:50:06] 17:50:06 (15864): gpu_mode: '0'
+[2023-05-16 17:50:06] 17:50:06 (15864): Launching Main process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\IronPdfEngine.exe" --browser-subprocess-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests host=127.0.0.1 port=33350 enable_debug=false log_path=ironpdfengine.log programming_language=java license_key=null'
+[2023-05-16 17:50:06] 17:50:06 (8940): Process os_name: 'windows'
+[2023-05-16 17:50:06] 17:50:06 (8940): gpu_mode: '0'
+[2023-05-16 17:50:06] 17:50:06 (8940): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --lang=en-US --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests /prefetch:2'
+[2023-05-16 17:50:06] 17:50:06 (15864): Cef initialization succeeded
+[2023-05-16 17:50:06] 17:50:06 (8940): Cef context initialized
+[2023-05-16 17:50:06] 17:50:06 (8940): Registering custom scheme for rendering raw html
+[2023-05-16 17:50:06] 17:50:06 (8940): Successfully registered custom scheme
+[2023-05-16 17:50:06] 17:50:06 (8940): Cef engine initialization complete
+[2023-05-16 17:50:06] 17:50:06 (8940): Process os_name: 'windows'
+[2023-05-16 17:50:06] 17:50:06 (8940): gpu_mode: '0'
+[2023-05-16 17:50:06] 17:50:06 (8940): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --lang=en-US --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests /prefetch:8'
+[2023-05-16 17:50:06] 17:50:06 (20696): Generating PDF from URL 'https://www.africau.edu/images/default/sample.pdf'
+[2023-05-16 17:50:06] 17:50:06 (20696): BROWSER SETTINGS:
+View: 1024x1280
+Enable Javascript: 1
+Username: 
+
+[2023-05-16 17:50:06] 17:50:06 (20696): RENDER SETTINGS:
+Backgrounds: 1, Emulate Screen: 1, Forms: 1, Landscape : 0
+Scale: 1
+Page Size Type: A4
+Custom Page Size: 210x297
+Actual Page Size: 210x297
+Page Margin Type: 2
+Margin Top: 25, Right: 25, Bottom: 25, Left: 25
+Header Html: 
+Footer Html: 
+Javascript: 
+Autosize Screen: 0, PPI: 96
+Title: 
+First Page Number: 1
+Save Path: 
+Render Delay: 0
+Max Header Height: 200, Max Footer Height : 200
+
+[2023-05-16 17:50:06] 17:50:06 (20696): Created new job group 0 for new document
+[2023-05-16 17:50:06] 17:50:06 (20696): Created job group 0
+[2023-05-16 17:50:06] 17:50:06 (20696): Queuing job 0
+[2023-05-16 17:50:06] 17:50:06 (20696): Checking for browser availability (0/30)
+[2023-05-16 17:50:06] 17:50:06 (20696): Creating new browser after waiting 0 seconds
+[2023-05-16 17:50:06] 17:50:06 (8940): Created browser id 1, 1 exist
+[2023-05-16 17:50:06] 17:50:06 (8940): Browser 1 created and ready for assignment
+[2023-05-16 17:50:06] 17:50:06 (8940): Assigning job 0 to browser 1
+[2023-05-16 17:50:06] 17:50:06 (8940): Processing job for url 'https://www.africau.edu/images/default/sample.pdf' on browser 1
+[2023-05-16 17:50:06] 17:50:06 (8940): Process os_name: 'windows'
+[2023-05-16 17:50:06] 17:50:06 (8940): gpu_mode: '0'
+[2023-05-16 17:50:06] 17:50:06 (8940): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:50:06] 17:50:06 (8940): Process os_name: 'windows'
+[2023-05-16 17:50:06] 17:50:06 (8940): gpu_mode: '0'
+[2023-05-16 17:50:06] 17:50:06 (8940): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:50:06] 17:50:06 (8940): Browser 1 loading state changed to 1 for url ''
+[2023-05-16 17:50:06] 17:50:06 (4640): Received resource request from null for https://www.africau.edu/images/default/sample.pdf on browser 1 (nav: 1, dl: 0)
+[2023-05-16 17:50:06] 17:50:06 (4640): Resolved resource request using default handler
+[2023-05-16 17:50:06] 17:50:06 (8940): Browser process received message: 'OnBrowserCreated'
+[2023-05-16 17:50:06] 17:50:06 (8940): Received message from render process with 0 bytes
+[2023-05-16 17:50:07] 17:50:07 (8940): Browser 1 frame 17179869185 started loading https://www.africau.edu/images/default/sample.pdf
+[2023-05-16 17:50:07] 17:50:07 (8940): Browser 1 status: 
+[2023-05-16 17:50:07] 17:50:07 (8940): Browser 1 frame 17179869188 started loading about:blank
+[2023-05-16 17:50:07] 17:50:07 (8940): Browser 1 frame 17179869188 ended loading about:blank
+[2023-05-16 17:50:07] 17:50:07 (8940): Browser 1 frame 17179869185 ended loading https://www.africau.edu/images/default/sample.pdf
+[2023-05-16 17:50:07] 17:50:07 (8940): Browser 1 loading state changed to 0 for url 'https://www.africau.edu/images/default/sample.pdf'
+[2023-05-16 17:50:07] 17:50:07 (8940): Frame loaded for job 0 on browser 1
+[2023-05-16 17:50:07] 17:50:07 (8940): Found job 0 in group 0 (of 1 groups)
+[2023-05-16 17:50:07] 17:50:07 (8940): Executing dev tools method 'Emulation.setEmulatedMedia' for browser 1
+[2023-05-16 17:50:07] 17:50:07 (8940): Executing dev tools method 'Page.getLayoutMetrics' for browser 1
+[2023-05-16 17:50:07] 17:50:07 (8940): Received dev tools message on browser 1: '{"id":1,"result":{}}' (size: 20)
+[2023-05-16 17:50:07] 17:50:07 (8940): Finished dev tools method on browser 1 (message ID: 1)
+[2023-05-16 17:50:07] 17:50:07 (8940): Received dev tools message on browser 1: '{"id":2,"result":{"layoutViewport":{"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280},"visualViewport":{"offsetX":0,"offsetY":0,"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280,"scale":1,"zoom":1},"contentSize":{"x":0,"y":0,"width":1024,"height":1280},"cssLayoutViewport":{"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280},"cssVisualViewport":{"offsetX":0,"offsetY":0,"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280,"scale":1,"zoom":1},"cssContentSize":{"x":0,"y":0,"width":1024,"height":1280}}}' (size: 536)
+[2023-05-16 17:50:07] 17:50:07 (8940): Finished dev tools method on browser 1 (message ID: 2)
+[2023-05-16 17:50:07] 17:50:07 (8940): Sending DOM-visit process message for browser 1 (job ID: 0)
+[2023-05-16 17:50:07] 17:50:07 (8940): Process os_name: 'windows'
+[2023-05-16 17:50:07] 17:50:07 (8940): gpu_mode: '0'
+[2023-05-16 17:50:07] 17:50:07 (8940): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --extension-process --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:50:07] 17:50:07 (8940): Browser process received message: 'OnDomVisited'
+[2023-05-16 17:50:07] 17:50:07 (8940): Received message from render process with 120 bytes
+[2023-05-16 17:50:07] 17:50:07 (8940): Processed html for browser 1
+[2023-05-16 17:50:07] 17:50:07 (14672): Finished waiting for render delay
+[2023-05-16 17:50:07] 17:50:07 (14672): Scaling content to paper using a scale of 1
+[2023-05-16 17:50:07] 17:50:07 (14672): Printing from browser to 'C:\Users\Petar\AppData\Local\Temp\43C3.tmp'
+[2023-05-16 17:50:07] 17:50:07 (8940): Received browser print callback for path 'C:\Users\Petar\AppData\Local\Temp\43C3.tmp' (1)
+[2023-05-16 17:50:07] 17:50:07 (8940): Print finished for browser 1(success: 1)
+[2023-05-16 17:50:07] 17:50:07 (8940): Resolving job for browser 1 with 894 bytes
+[2023-05-16 17:50:07] 17:50:07 (8940): PdfDocumentFactory created document 0000021B4D889AE0 from 894 bytes
+[2023-05-16 17:50:07] 17:50:07 (8940): Resolving job for browser 1 with 1 page document
+[2023-05-16 17:50:07] 17:50:07 (8940): No document title found
+[2023-05-16 17:50:07] 17:50:07 (8940): Retrieve Html title: 
+[2023-05-16 17:50:07] 17:50:07 (8940): Generating form fields
+[2023-05-16 17:50:07] 17:50:07 (8940): Adding default font for form fields
+[2023-05-16 17:50:07] 17:50:07 (8940): Initializing forms for document
+[2023-05-16 17:50:07] 17:50:07 (8940): Sorting 0 marked fields
+[2023-05-16 17:50:07] 17:50:07 (8940): Adding form fields to 1 pages
+[2023-05-16 17:50:07] 17:50:07 (8940): Generating bytes for document 0000021B4D889AE0
+[2023-05-16 17:50:07] 17:50:07 (8940): Successfully generated 1218 bytes for document 0000021B4D889AE0
+[2023-05-16 17:50:07] 17:50:07 (8940): PdfDocumentFactory closed document 0000021B4D889AE0
+[2023-05-16 17:50:07] 17:50:07 (10080): Closing browser 1
+[2023-05-16 17:50:07] 17:50:07 (8940): Received dev tools message on browser 1: '{"method":"Inspector.detached","params":{"reason":"Render process gone."}}' (size: 74)
+[2023-05-16 17:50:07] 17:50:07 (8940): Destroying browser id 1, 0 remain
+[2023-05-16 17:50:07] 17:50:07 (8940): Browser 1 closed for job 0
+[2023-05-16 17:50:07] 17:50:07 (8940): Found job 0 in group 0 (of 1 groups)
+[2023-05-16 17:50:07] 17:50:07 (8940): Job group 0 finished
+[2023-05-16 17:50:07] 17:50:07 (8940): CefMessagePumpStd::Quit()
+[2023-05-16 17:50:07] 17:50:07 (20696): PdfDocumentFactory created document 0000021B4D889920 from 1218 bytes
+[2023-05-16 17:50:07] 17:50:07 (20696): Storing new document 0
+[2023-05-16 17:50:45] ---------- Windows v10.0.19045.0 (C:\Users\Petar\Documents\GitHub\Web-Crawler\ironpdfengine.log) ----------
+[2023-05-16 17:50:45] Using deployment directory 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\'
+[2023-05-16 17:50:45] Creating deployment candidates using root path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\' (download: False)
+[2023-05-16 17:50:45] Creating folder deployments for win-x64
+[2023-05-16 17:50:45] Creating embedded deployments for win-x64
+[2023-05-16 17:50:45] Successfully located 'IronInterop' at 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:50:45] Determining deployment commands for platform 'Windows' v10.0.19045.0
+[2023-05-16 17:50:45] Using deployment instructions for 'default' v
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:50:45] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:50:45] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:50:45] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:50:45] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:50:45] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:50:45] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:50:45] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:50:45] Attempting to load Windows library 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:50:45] Successfully loaded native library from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-05-16 17:50:45] Successfully loaded 'IronInterop' version '2023.3.0.12968' from 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:50:45] Successfully deployed 'IronPdf' using 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:50:45] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.19045.0, VersionName: , Domain: IronPdfEngine, Thread: , Path: C:\Users\Petar\Documents\GitHub\Web-Crawler
+[2023-05-16 17:50:45] 17:50:45 (24232): Detected operating system windows
+[2023-05-16 17:50:45] 17:50:45 (24232): ~ Chrome renderer v2023.3.0.12968~
+[2023-05-16 17:50:45] 17:50:45 (24232): IsSingleProcess: 0
+[2023-05-16 17:50:45] 17:50:45 (24232): Creating Cef proxy controller
+[2023-05-16 17:50:45] 17:50:45 (24232): Creating Cef interface
+[2023-05-16 17:50:45] 17:50:45 (24232): Created new lifespan events
+[2023-05-16 17:50:45] 17:50:45 (24232): Created new browser process handler
+[2023-05-16 17:50:45] 17:50:45 (24232): Created new load handler
+[2023-05-16 17:50:45] 17:50:45 (24232): Created new render handler
+[2023-05-16 17:50:45] 17:50:45 (24232): Created new render process handler
+[2023-05-16 17:50:45] 17:50:45 (24232): Created new print handler
+[2023-05-16 17:50:45] 17:50:45 (24232): Created new dev tools handler
+[2023-05-16 17:50:45] 17:50:45 (24232): Created new dev tools registration factory
+[2023-05-16 17:50:45] 17:50:45 (24232): Created new lifespan handler
+[2023-05-16 17:50:45] 17:50:45 (24232): Assigning Cef proxy controller events...
+[2023-05-16 17:50:45] 17:50:45 (24232): Assigning Cef proxy controller stream provider...
+[2023-05-16 17:50:45] 17:50:45 (24232): Initializing Cef proxy controller
+[2023-05-16 17:50:45] 17:50:45 (24232): Using subprocess path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe'
+[2023-05-16 17:50:45] 17:50:45 (24232): Using framework path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:50:45] 17:50:45 (24232): Using locales path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales'
+[2023-05-16 17:50:45] 17:50:45 (24232): Using resources path 'C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-05-16 17:50:45] 17:50:45 (24232): Process os_name: 'windows'
+[2023-05-16 17:50:45] 17:50:45 (24232): gpu_mode: '0'
+[2023-05-16 17:50:45] 17:50:45 (24232): Launching Main process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\IronPdfEngine.exe" --browser-subprocess-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests host=127.0.0.1 port=33350 enable_debug=false log_path=ironpdfengine.log programming_language=java license_key=null'
+[2023-05-16 17:50:45] 17:50:45 (23428): Process os_name: 'windows'
+[2023-05-16 17:50:45] 17:50:45 (23428): gpu_mode: '0'
+[2023-05-16 17:50:45] 17:50:45 (23428): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --lang=en-US --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests /prefetch:2'
+[2023-05-16 17:50:45] 17:50:45 (24232): Cef initialization succeeded
+[2023-05-16 17:50:45] 17:50:45 (23428): Cef context initialized
+[2023-05-16 17:50:45] 17:50:45 (23428): Registering custom scheme for rendering raw html
+[2023-05-16 17:50:45] 17:50:45 (23428): Successfully registered custom scheme
+[2023-05-16 17:50:45] 17:50:45 (23428): Cef engine initialization complete
+[2023-05-16 17:50:45] 17:50:45 (23428): Process os_name: 'windows'
+[2023-05-16 17:50:45] 17:50:45 (23428): gpu_mode: '0'
+[2023-05-16 17:50:45] 17:50:45 (23428): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --lang=en-US --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests /prefetch:8'
+[2023-05-16 17:50:46] 17:50:46 (20360): Generating PDF from URL 'https://www.africau.edu/images/default/sample.pdf'
+[2023-05-16 17:50:46] 17:50:46 (20360): BROWSER SETTINGS:
+View: 1024x1280
+Enable Javascript: 1
+Username: 
+
+[2023-05-16 17:50:46] 17:50:46 (20360): RENDER SETTINGS:
+Backgrounds: 1, Emulate Screen: 1, Forms: 1, Landscape : 0
+Scale: 1
+Page Size Type: A4
+Custom Page Size: 210x297
+Actual Page Size: 210x297
+Page Margin Type: 2
+Margin Top: 25, Right: 25, Bottom: 25, Left: 25
+Header Html: 
+Footer Html: 
+Javascript: 
+Autosize Screen: 0, PPI: 96
+Title: 
+First Page Number: 1
+Save Path: 
+Render Delay: 0
+Max Header Height: 200, Max Footer Height : 200
+
+[2023-05-16 17:50:46] 17:50:46 (20360): Created new job group 0 for new document
+[2023-05-16 17:50:46] 17:50:46 (20360): Created job group 0
+[2023-05-16 17:50:46] 17:50:46 (20360): Queuing job 0
+[2023-05-16 17:50:46] 17:50:46 (20360): Checking for browser availability (0/30)
+[2023-05-16 17:50:46] 17:50:46 (20360): Creating new browser after waiting 0 seconds
+[2023-05-16 17:50:46] 17:50:46 (23428): Created browser id 1, 1 exist
+[2023-05-16 17:50:46] 17:50:46 (23428): Browser 1 created and ready for assignment
+[2023-05-16 17:50:46] 17:50:46 (23428): Assigning job 0 to browser 1
+[2023-05-16 17:50:46] 17:50:46 (23428): Processing job for url 'https://www.africau.edu/images/default/sample.pdf' on browser 1
+[2023-05-16 17:50:46] 17:50:46 (23428): Process os_name: 'windows'
+[2023-05-16 17:50:46] 17:50:46 (23428): gpu_mode: '0'
+[2023-05-16 17:50:46] 17:50:46 (23428): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:50:46] 17:50:46 (23428): Process os_name: 'windows'
+[2023-05-16 17:50:46] 17:50:46 (23428): gpu_mode: '0'
+[2023-05-16 17:50:46] 17:50:46 (23428): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:50:46] 17:50:46 (23428): Browser 1 loading state changed to 1 for url ''
+[2023-05-16 17:50:46] 17:50:46 (21496): Received resource request from null for https://www.africau.edu/images/default/sample.pdf on browser 1 (nav: 1, dl: 0)
+[2023-05-16 17:50:46] 17:50:46 (21496): Resolved resource request using default handler
+[2023-05-16 17:50:46] 17:50:46 (23428): Browser process received message: 'OnBrowserCreated'
+[2023-05-16 17:50:46] 17:50:46 (23428): Received message from render process with 0 bytes
+[2023-05-16 17:50:46] 17:50:46 (23428): Browser 1 frame 17179869185 started loading https://www.africau.edu/images/default/sample.pdf
+[2023-05-16 17:50:46] 17:50:46 (23428): Browser 1 status: 
+[2023-05-16 17:50:46] 17:50:46 (23428): Browser 1 frame 17179869188 started loading about:blank
+[2023-05-16 17:50:46] 17:50:46 (23428): Browser 1 frame 17179869188 ended loading about:blank
+[2023-05-16 17:50:46] 17:50:46 (23428): Browser 1 frame 17179869185 ended loading https://www.africau.edu/images/default/sample.pdf
+[2023-05-16 17:50:46] 17:50:46 (23428): Browser 1 loading state changed to 0 for url 'https://www.africau.edu/images/default/sample.pdf'
+[2023-05-16 17:50:46] 17:50:46 (23428): Frame loaded for job 0 on browser 1
+[2023-05-16 17:50:46] 17:50:46 (23428): Found job 0 in group 0 (of 1 groups)
+[2023-05-16 17:50:46] 17:50:46 (23428): Executing dev tools method 'Emulation.setEmulatedMedia' for browser 1
+[2023-05-16 17:50:46] 17:50:46 (23428): Executing dev tools method 'Page.getLayoutMetrics' for browser 1
+[2023-05-16 17:50:46] 17:50:46 (23428): Received dev tools message on browser 1: '{"id":1,"result":{}}' (size: 20)
+[2023-05-16 17:50:46] 17:50:46 (23428): Finished dev tools method on browser 1 (message ID: 1)
+[2023-05-16 17:50:46] 17:50:46 (23428): Process os_name: 'windows'
+[2023-05-16 17:50:46] 17:50:46 (23428): gpu_mode: '0'
+[2023-05-16 17:50:46] 17:50:46 (23428): Launching child process '"C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=renderer --locales-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\Petar\Documents\GitHub\Web-Crawler\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --extension-process --user-data-dir="C:\Users\Petar\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests'
+[2023-05-16 17:50:46] 17:50:46 (23428): Received dev tools message on browser 1: '{"id":2,"result":{"layoutViewport":{"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280},"visualViewport":{"offsetX":0,"offsetY":0,"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280,"scale":1,"zoom":1},"contentSize":{"x":0,"y":0,"width":1024,"height":1280},"cssLayoutViewport":{"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280},"cssVisualViewport":{"offsetX":0,"offsetY":0,"pageX":0,"pageY":0,"clientWidth":1024,"clientHeight":1280,"scale":1,"zoom":1},"cssContentSize":{"x":0,"y":0,"width":1024,"height":1280}}}' (size: 536)
+[2023-05-16 17:50:46] 17:50:46 (23428): Finished dev tools method on browser 1 (message ID: 2)
+[2023-05-16 17:50:46] 17:50:46 (23428): Sending DOM-visit process message for browser 1 (job ID: 0)
+[2023-05-16 17:50:46] 17:50:46 (23428): Browser process received message: 'OnDomVisited'
+[2023-05-16 17:50:46] 17:50:46 (23428): Received message from render process with 120 bytes
+[2023-05-16 17:50:46] 17:50:46 (23428): Processed html for browser 1
+[2023-05-16 17:50:46] 17:50:46 (5588): Finished waiting for render delay
+[2023-05-16 17:50:46] 17:50:46 (5588): Scaling content to paper using a scale of 1
+[2023-05-16 17:50:46] 17:50:46 (5588): Printing from browser to 'C:\Users\Petar\AppData\Local\Temp\DE2E.tmp'
+[2023-05-16 17:50:46] 17:50:46 (23428): Received browser print callback for path 'C:\Users\Petar\AppData\Local\Temp\DE2E.tmp' (1)
+[2023-05-16 17:50:46] 17:50:46 (23428): Print finished for browser 1(success: 1)
+[2023-05-16 17:50:46] 17:50:46 (23428): Resolving job for browser 1 with 894 bytes
+[2023-05-16 17:50:46] 17:50:46 (23428): PdfDocumentFactory created document 00000206497072A0 from 894 bytes
+[2023-05-16 17:50:46] 17:50:46 (23428): Resolving job for browser 1 with 1 page document
+[2023-05-16 17:50:46] 17:50:46 (23428): No document title found
+[2023-05-16 17:50:46] 17:50:46 (23428): Retrieve Html title: 
+[2023-05-16 17:50:46] 17:50:46 (23428): Generating form fields
+[2023-05-16 17:50:46] 17:50:46 (23428): Adding default font for form fields
+[2023-05-16 17:50:46] 17:50:46 (23428): Initializing forms for document
+[2023-05-16 17:50:46] 17:50:46 (23428): Sorting 0 marked fields
+[2023-05-16 17:50:46] 17:50:46 (23428): Adding form fields to 1 pages
+[2023-05-16 17:50:46] 17:50:46 (23428): Generating bytes for document 00000206497072A0
+[2023-05-16 17:50:46] 17:50:46 (23428): Successfully generated 1218 bytes for document 00000206497072A0
+[2023-05-16 17:50:46] 17:50:46 (23428): PdfDocumentFactory closed document 00000206497072A0
+[2023-05-16 17:50:46] 17:50:46 (17032): Closing browser 1
+[2023-05-16 17:50:46] 17:50:46 (23428): Received dev tools message on browser 1: '{"method":"Inspector.detached","params":{"reason":"Render process gone."}}' (size: 74)
+[2023-05-16 17:50:46] 17:50:46 (23428): Destroying browser id 1, 0 remain
+[2023-05-16 17:50:46] 17:50:46 (23428): Browser 1 closed for job 0
+[2023-05-16 17:50:46] 17:50:46 (23428): Found job 0 in group 0 (of 1 groups)
+[2023-05-16 17:50:46] 17:50:46 (23428): Job group 0 finished
+[2023-05-16 17:50:46] 17:50:46 (23428): CefMessagePumpStd::Quit()
+[2023-05-16 17:50:46] 17:50:46 (20360): PdfDocumentFactory created document 0000020649705CC0 from 1218 bytes
+[2023-05-16 17:50:46] 17:50:46 (20360): Storing new document 0
+[2023-05-16 17:50:46] Retrieved license key from inline variable
+[2023-05-16 17:50:46] Error 0x01 while validating license key
