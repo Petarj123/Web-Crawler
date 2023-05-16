@@ -26,6 +26,11 @@ public class WebCrawler {
     private final ScrapedDataRepository scrapedDataRepository;
     @SneakyThrows
     public void crawl(String url, int maxDepth) {
+
+        if(maxDepth <= 0){
+            throw new RuntimeException("Depth cant be less than or equal to 0");
+        }
+
         String encodedUrl = parser.cleanUrl(url);
         String baseUrl = parser.getBaseUrl(encodedUrl);
         directivesMap.put(baseUrl, parser.parseRobotstxt(baseUrl));
