@@ -26,7 +26,7 @@ public class WebCrawler {
     private final ScrapedDataRepository scrapedDataRepository;
     @SneakyThrows
     public void crawl(String url, int maxDepth) {
-        String encodedUrl = url.replace(" ", "+");
+        String encodedUrl = parser.cleanUrl(url);
         String baseUrl = parser.getBaseUrl(encodedUrl);
         directivesMap.put(baseUrl, parser.parseRobotstxt(baseUrl));
 
@@ -48,14 +48,16 @@ public class WebCrawler {
                 for (Element paragraph : document.select("p")) {
                     paragraphText.append(paragraph.text()).append("\n");
                 }
-                ScrapedData data = ScrapedData.builder()
-                        .URL(currentUrl)
-                        .title(document.title())
-                        .text(paragraphText.toString())
-                        .scrapedAt(new Date())
-                        .build();
-                System.out.println(data.toString());
-                scrapedDataRepository.save(data);
+                if (!paragraphText.isEmpty()){
+                    ScrapedData data = ScrapedData.builder()
+                            .URL(currentUrl)
+                            .title(document.title())
+                            .text(paragraphText.toString())
+                            .scrapedAt(new Date())
+                            .build();
+                    System.out.println(data.toString());
+                    scrapedDataRepository.save(data);
+                }
 
                 for (Element link : document.select("a[href]")) {
                     String nextLink = link.absUrl("href");
@@ -73,6 +75,7 @@ public class WebCrawler {
                 }
             }
         }
+        System.out.println("Crawling completed");
     }
 
 

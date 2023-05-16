@@ -103,14 +103,8 @@ public class RobotstxtParser {
         }
         return null;
     }
-    public String encodeUrl(String url) throws URISyntaxException {
-        URI uri = new URI(url);
-        String query = uri.getQuery();
-        if (query != null) {
-            String encodedQuery = URLEncoder.encode(query, StandardCharsets.UTF_8);
-            return url.replace(query, encodedQuery).replace(" ", "+");
-        }
-        return url;
+    public String cleanUrl(String url) {
+        return url.replace(" ", "+");
     }
 
 }
