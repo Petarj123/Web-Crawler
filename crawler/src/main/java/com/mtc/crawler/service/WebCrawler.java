@@ -20,7 +20,6 @@ import java.util.*;
 @Service
 @RequiredArgsConstructor
 public class WebCrawler {
-
     private final RobotstxtParser parser;
     private final Map<String, Map<String, Set<String>>> directivesMap = new HashMap<>();
     private final ScrapedDataRepository scrapedDataRepository;
