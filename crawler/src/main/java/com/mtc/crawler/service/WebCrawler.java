@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.util.*;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -27,25 +28,30 @@ public class WebCrawler {
     private final Map<String, Map<String, Set<String>>> directivesMap = new HashMap<>();
     private final ScrapedDataRepository scrapedDataRepository;
     private static final Set<String> visitedLinks = Collections.synchronizedSet(new HashSet<>());
-
+    private final ConcurrentLinkedQueue<UrlDepth> queue = new ConcurrentLinkedQueue<>();
     public void start(String url, int maxDepth, int numThreads) {
         ExecutorService executor = Executors.newFixedThreadPool(numThreads);
+        List<WebCrawler> crawlerList = new ArrayList<>();
+
+        // Create WebCrawler instances
         for (int i = 0; i < numThreads; i++) {
-            executor.execute(() -> {
-                WebCrawler crawler = new WebCrawler(parser, scrapedDataRepository);
-                crawler.crawl(url, maxDepth);
-            });
+            WebCrawler crawler = new WebCrawler(parser, scrapedDataRepository);
+            crawlerList.add(crawler);
         }
+
+        // Execute crawl() on each WebCrawler instance
+        for (WebCrawler crawler : crawlerList) {
+            executor.execute(() -> crawler.crawl(url, maxDepth));
+        }
+
         executor.shutdown();
         try {
             executor.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-        while (!executor.isTerminated()) {
-            // Wait until all threads have finished
-        }
         visitedLinks.clear();
+        queue.clear();
     }
 
     @SneakyThrows
@@ -61,15 +67,13 @@ public class WebCrawler {
 
         int delay = parser.crawlDelay(baseUrl + "/robots.txt");
 
-        Queue<UrlDepth> queue = new LinkedList<>();
-
         queue.add(new UrlDepth(encodedUrl, 0));
 
         while (!queue.isEmpty()) {
             UrlDepth urlDepth = queue.poll();
             String currentUrl = urlDepth.getUrl();
             int currentDepth = urlDepth.getDepth();
-            System.out.println("CURRENT DEPTH : " + currentDepth + " ------------------------------------------------------------------------------------------------");
+            
             Thread.sleep(delay * 1000L);
             Document document = request(currentUrl, visitedLinks);
             if (document != null) {
@@ -84,7 +88,6 @@ public class WebCrawler {
                             .text(paragraphText.toString())
                             .scrapedAt(new Date())
                             .build();
-                    System.out.println(data.toString());
                     scrapedDataRepository.save(data);
                 }
 
