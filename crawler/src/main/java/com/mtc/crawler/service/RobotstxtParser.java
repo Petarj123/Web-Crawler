@@ -6,19 +6,15 @@ import org.springframework.stereotype.Component;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.net.*;
-import java.nio.charset.StandardCharsets;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.*;
 
 @Component
 public class RobotstxtParser {
 
-    public static void main(String[] args) throws MalformedURLException, URISyntaxException {
-        RobotstxtParser robotstxtParser = new RobotstxtParser();
-        String string = robotstxtParser.getBaseUrl("https://twitter.com/robots.txt");
-        robotstxtParser.crawlDelay("https://twitter.com/robots.txt");
-    }
     @SneakyThrows
     public Map<String, Set<String>> parseRobotstxt(String url){
         String baseUrl = getBaseUrl(url);

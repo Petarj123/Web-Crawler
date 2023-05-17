@@ -16,6 +16,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 @Service
 @RequiredArgsConstructor
@@ -23,10 +26,32 @@ public class WebCrawler {
     private final RobotstxtParser parser;
     private final Map<String, Map<String, Set<String>>> directivesMap = new HashMap<>();
     private final ScrapedDataRepository scrapedDataRepository;
+    private static final Set<String> visitedLinks = Collections.synchronizedSet(new HashSet<>());
+
+    public void start(String url, int maxDepth, int numThreads) {
+        ExecutorService executor = Executors.newFixedThreadPool(numThreads);
+        for (int i = 0; i < numThreads; i++) {
+            executor.execute(() -> {
+                WebCrawler crawler = new WebCrawler(parser, scrapedDataRepository);
+                crawler.crawl(url, maxDepth);
+            });
+        }
+        executor.shutdown();
+        try {
+            executor.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        while (!executor.isTerminated()) {
+            // Wait until all threads have finished
+        }
+        visitedLinks.clear();
+    }
+
     @SneakyThrows
     public void crawl(String url, int maxDepth) {
 
-        if(maxDepth <= 0){
+        if (maxDepth <= 0) {
             throw new RuntimeException("Depth cant be less than or equal to 0");
         }
 
@@ -37,7 +62,7 @@ public class WebCrawler {
         int delay = parser.crawlDelay(baseUrl + "/robots.txt");
 
         Queue<UrlDepth> queue = new LinkedList<>();
-        Set<String> visitedLinks = new HashSet<>();
+
         queue.add(new UrlDepth(encodedUrl, 0));
 
         while (!queue.isEmpty()) {
@@ -52,7 +77,7 @@ public class WebCrawler {
                 for (Element paragraph : document.select("p")) {
                     paragraphText.append(paragraph.text()).append("\n");
                 }
-                if (!paragraphText.isEmpty()){
+                if (!paragraphText.isEmpty()) {
                     ScrapedData data = ScrapedData.builder()
                             .URL(currentUrl)
                             .title(document.title())
@@ -81,8 +106,6 @@ public class WebCrawler {
         }
         System.out.println("Crawling completed");
     }
-
-
     private Document request(String URL, Set<String> visitedLinks){
         try {
             Connection connection = Jsoup.connect(URL).userAgent("SentimentAnalyzerBot/1.0");
