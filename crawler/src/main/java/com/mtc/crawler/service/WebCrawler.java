@@ -49,7 +49,7 @@ public class WebCrawler {
         visitedLinks.clear();
         queue.clear();
     }
-
+    // TODO Make this more efficient, there should be a way to get all possible url before scraping, and then divide scraping job amongst threads
     @SneakyThrows
     public void crawl(String url, int maxDepth, int threadId) {
 
