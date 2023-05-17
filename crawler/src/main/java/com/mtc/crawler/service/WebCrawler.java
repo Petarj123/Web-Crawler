@@ -31,17 +31,12 @@ public class WebCrawler {
     private final ConcurrentLinkedQueue<UrlDepth> queue = new ConcurrentLinkedQueue<>();
     public void start(String url, int maxDepth, int numThreads) {
         ExecutorService executor = Executors.newFixedThreadPool(numThreads);
-        List<WebCrawler> crawlerList = new ArrayList<>();
 
         // Create WebCrawler instances
         for (int i = 0; i < numThreads; i++) {
             WebCrawler crawler = new WebCrawler(parser, scrapedDataRepository);
-            crawlerList.add(crawler);
-        }
-
-        // Execute crawl() on each WebCrawler instance
-        for (WebCrawler crawler : crawlerList) {
-            executor.execute(() -> crawler.crawl(url, maxDepth));
+            int finalI = i;
+            executor.execute(() -> crawler.crawl(url, maxDepth, finalI));
         }
 
         executor.shutdown();
@@ -50,12 +45,13 @@ public class WebCrawler {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
+
         visitedLinks.clear();
         queue.clear();
     }
 
     @SneakyThrows
-    public void crawl(String url, int maxDepth) {
+    public void crawl(String url, int maxDepth, int threadId) {
 
         if (maxDepth <= 0) {
             throw new RuntimeException("Depth cant be less than or equal to 0");
@@ -73,7 +69,7 @@ public class WebCrawler {
             UrlDepth urlDepth = queue.poll();
             String currentUrl = urlDepth.getUrl();
             int currentDepth = urlDepth.getDepth();
-            
+
             Thread.sleep(delay * 1000L);
             Document document = request(currentUrl, visitedLinks);
             if (document != null) {
@@ -83,14 +79,15 @@ public class WebCrawler {
                 }
                 if (!paragraphText.isEmpty()) {
                     ScrapedData data = ScrapedData.builder()
-                            .URL(currentUrl)
+                            .url(currentUrl)
                             .title(document.title())
                             .text(paragraphText.toString())
                             .scrapedAt(new Date())
                             .build();
-                    scrapedDataRepository.save(data);
+                    if (!scrapedDataRepository.existsByUrl(currentUrl)) {
+                        scrapedDataRepository.save(data);
+                    }
                 }
-
                 for (Element link : document.select("a[href]")) {
                     String nextLink = link.absUrl("href");
 
@@ -107,7 +104,7 @@ public class WebCrawler {
                 }
             }
         }
-        System.out.println("Crawling completed");
+        System.out.println("Crawling completed for thread " + threadId);
     }
     private Document request(String URL, Set<String> visitedLinks){
         try {

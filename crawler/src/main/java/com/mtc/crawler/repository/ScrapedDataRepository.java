@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ScrapedDataRepository extends MongoRepository<ScrapedData, String> {
+    boolean existsByUrl(String currentUrl);
 }

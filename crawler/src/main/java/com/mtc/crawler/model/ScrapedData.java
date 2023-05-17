@@ -14,7 +14,7 @@ public class ScrapedData {
     @Id
     private String id;
     private String title;
-    private String URL;
+    private String url;
     private String text;
     private Date scrapedAt;
 
