@@ -49,7 +49,7 @@ public class WebCrawler {
         visitedLinks.clear();
         queue.clear();
     }
-    // TODO Make this more efficient, there should be a way to get all possible url before scraping, and then divide scraping job amongst threads
+    // TODO Make this more efficient, there should be a way to get all possible url before scraping, and then divide scraping job amongst threads, right now it seems to split workload evenly sometimes, but each thread finishes its work before next one starts doing its work.
     @SneakyThrows
     public void crawl(String url, int maxDepth, int threadId) {
 
