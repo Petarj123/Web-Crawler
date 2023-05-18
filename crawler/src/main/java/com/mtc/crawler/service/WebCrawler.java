@@ -16,10 +16,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.util.*;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 @Service
 @RequiredArgsConstructor
@@ -28,7 +25,7 @@ public class WebCrawler {
     private final Map<String, Map<String, Set<String>>> directivesMap = new HashMap<>();
     private final ScrapedDataRepository scrapedDataRepository;
     private static final Set<String> visitedLinks = Collections.synchronizedSet(new HashSet<>());
-    private final ConcurrentLinkedQueue<UrlDepth> queue = new ConcurrentLinkedQueue<>();
+    private final BlockingQueue<UrlDepth> queue = new LinkedBlockingQueue<>();
     public void start(String url, int maxDepth, int numThreads) {
         ExecutorService executor = Executors.newFixedThreadPool(numThreads);
 
@@ -50,7 +47,9 @@ public class WebCrawler {
         queue.clear();
     }
     /**
-     * Find a way to make this more efficient if possible, see if breadth first search is the problem*/
+     * Find a way to make this more efficient if possible, see if breadth first search is the problem
+     * Check out why work stealing is sometimes happening a lot
+     * Try to improve load balancing among threads*/
     @SneakyThrows
     public void crawl(String url, int maxDepth, int threadId) {
 
