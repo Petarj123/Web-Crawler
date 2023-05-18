@@ -25,7 +25,7 @@ public class WebCrawler {
     private final Map<String, Map<String, Set<String>>> directivesMap = new HashMap<>();
     private final ScrapedDataRepository scrapedDataRepository;
     private static final Set<String> visitedLinks = Collections.synchronizedSet(new HashSet<>());
-    private final BlockingQueue<UrlDepth> queue = new LinkedBlockingQueue<>();
+    private static final BlockingQueue<UrlDepth> queue = new LinkedBlockingQueue<>();
     public void start(String url, int maxDepth, int numThreads) {
         ExecutorService executor = Executors.newFixedThreadPool(numThreads);
 
@@ -43,13 +43,10 @@ public class WebCrawler {
             Thread.currentThread().interrupt();
         }
 
-        /*visitedLinks.clear();
-        queue.clear();*/
+        visitedLinks.clear();
+        queue.clear();
     }
-    /**
-     * Find a way to make this more efficient if possible, see if breadth first search is the problem
-     * Check out why work stealing is sometimes happening a lot
-     * Try to improve load balancing among threads*/
+    
     @SneakyThrows
     public void crawl(String url, int maxDepth, int threadId) {
 
@@ -67,6 +64,7 @@ public class WebCrawler {
 
         while (!queue.isEmpty()) {
             UrlDepth urlDepth = queue.poll();
+            System.out.println("QUEUE " + queue);
             String currentUrl = urlDepth.getUrl();
             int currentDepth = urlDepth.getDepth();
 
@@ -106,7 +104,7 @@ public class WebCrawler {
             }
         }
         System.out.println("Crawling completed for thread " + threadId);
-        System.out.printf("Thread %d score: %d", threadId, score);
+        System.out.printf("Thread %d score: %d\n", threadId, score);
     }
     private Document request(String URL, Set<String> visitedLinks){
         try {
@@ -124,7 +122,7 @@ public class WebCrawler {
         return null;
     }
 
-    private boolean isAllowed(String url, Map<String, Set<String>> directives) throws MalformedURLException, URISyntaxException {
+    private boolean isAllowed(String url, Map<String, Set<String>> directives) {
         String baseUrl = parser.getBaseUrl(url);
         if (baseUrl == null) {
             return false;
