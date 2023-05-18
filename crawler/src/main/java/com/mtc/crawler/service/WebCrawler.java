@@ -13,8 +13,6 @@ import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
 import java.util.*;
 import java.util.concurrent.*;
 
@@ -46,7 +44,7 @@ public class WebCrawler {
         visitedLinks.clear();
         queue.clear();
     }
-    
+
     @SneakyThrows
     public void crawl(String url, int maxDepth, int threadId) {
 
