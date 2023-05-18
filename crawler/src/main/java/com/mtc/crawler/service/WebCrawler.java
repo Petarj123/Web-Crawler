@@ -49,7 +49,8 @@ public class WebCrawler {
         visitedLinks.clear();
         queue.clear();
     }
-    // TODO Make this more efficient, there should be a way to get all possible url before scraping, and then divide scraping job amongst threads, right now it seems to split workload evenly sometimes, but each thread finishes its work before next one starts doing its work.
+    /**
+     * Find a way to make this more efficient if possible, see if breadth first search is the problem*/
     @SneakyThrows
     public void crawl(String url, int maxDepth, int threadId) {
 
@@ -62,7 +63,7 @@ public class WebCrawler {
         directivesMap.put(baseUrl, parser.parseRobotstxt(baseUrl));
 
         int delay = parser.crawlDelay(baseUrl + "/robots.txt");
-
+        int score = 0;
         queue.add(new UrlDepth(encodedUrl, 0));
 
         while (!queue.isEmpty()) {
@@ -100,11 +101,13 @@ public class WebCrawler {
                             queue.add(new UrlDepth(nextLink, currentDepth + 1));
                         }
                         visitedLinks.add(nextLink);
+                        score++;
                     }
                 }
             }
         }
         System.out.println("Crawling completed for thread " + threadId);
+        System.out.printf("Thread %d score: %d", threadId, score);
     }
     private Document request(String URL, Set<String> visitedLinks){
         try {
