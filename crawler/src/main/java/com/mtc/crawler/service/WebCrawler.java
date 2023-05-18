@@ -43,8 +43,8 @@ public class WebCrawler {
             Thread.currentThread().interrupt();
         }
 
-        visitedLinks.clear();
-        queue.clear();
+        /*visitedLinks.clear();
+        queue.clear();*/
     }
     /**
      * Find a way to make this more efficient if possible, see if breadth first search is the problem
