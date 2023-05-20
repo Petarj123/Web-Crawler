@@ -76,8 +76,10 @@ public class WebCrawler {
                             .text(paragraphText.toString())
                             .scrapedAt(new Date())
                             .build();
-                    if (!scrapedDataRepository.existsByUrl(currentUrl) || !scrapedDataRepository.existsByText(data.getText())){
-                        scrapedDataSet.add(data);
+                    if (!scrapedDataSet.contains(data)) {
+                        synchronized (scrapedDataSet) {
+                            scrapedDataSet.add(data);
+                        }
                     }
                 }
                 for (Element link : document.select("a[href]")) {
