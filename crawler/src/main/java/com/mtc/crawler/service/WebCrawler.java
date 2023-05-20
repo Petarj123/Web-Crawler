@@ -23,24 +23,20 @@ public class WebCrawler {
     private final Map<String, Map<String, Set<String>>> directivesMap = new HashMap<>();
     private final ScrapedDataRepository scrapedDataRepository;
     private static final Set<String> visitedLinks = Collections.synchronizedSet(new HashSet<>());
+    private static final Set<ScrapedData> scrapedDataSet = Collections.synchronizedSet(new HashSet<>());
     private static final BlockingQueue<UrlDepth> queue = new LinkedBlockingQueue<>();
     public void start(String url, int maxDepth, int numThreads) {
-        ExecutorService executor = Executors.newFixedThreadPool(numThreads);
+        try (ExecutorService executor = Executors.newFixedThreadPool(numThreads)) {
+            // Create WebCrawler instances
+            for (int i = 0; i < numThreads; i++) {
+                WebCrawler crawler = new WebCrawler(parser, scrapedDataRepository);
+                int finalI = i;
+                executor.execute(() -> crawler.crawl(url, maxDepth, finalI));
+            }
 
-        // Create WebCrawler instances
-        for (int i = 0; i < numThreads; i++) {
-            WebCrawler crawler = new WebCrawler(parser, scrapedDataRepository);
-            int finalI = i;
-            executor.execute(() -> crawler.crawl(url, maxDepth, finalI));
+            executor.shutdown();
         }
-
-        executor.shutdown();
-        try {
-            executor.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
-
+        scrapedDataRepository.saveAll(scrapedDataSet);
         visitedLinks.clear();
         queue.clear();
     }
@@ -53,6 +49,7 @@ public class WebCrawler {
         }
 
         String encodedUrl = parser.cleanUrl(url);
+        System.out.println("Encoded url " + encodedUrl);
         String baseUrl = parser.getBaseUrl(encodedUrl);
         directivesMap.put(baseUrl, parser.parseRobotstxt(baseUrl));
 
@@ -62,12 +59,11 @@ public class WebCrawler {
 
         while (!queue.isEmpty()) {
             UrlDepth urlDepth = queue.poll();
-            System.out.println("QUEUE " + queue);
             String currentUrl = urlDepth.getUrl();
             int currentDepth = urlDepth.getDepth();
 
             Thread.sleep(delay * 1000L);
-            Document document = request(currentUrl, visitedLinks);
+            Document document = request(currentUrl);
             if (document != null) {
                 StringBuilder paragraphText = new StringBuilder();
                 for (Element paragraph : document.select("p")) {
@@ -80,8 +76,8 @@ public class WebCrawler {
                             .text(paragraphText.toString())
                             .scrapedAt(new Date())
                             .build();
-                    if (!scrapedDataRepository.existsByUrl(currentUrl)) {
-                        scrapedDataRepository.save(data);
+                    if (!scrapedDataRepository.existsByUrl(currentUrl) || !scrapedDataRepository.existsByText(data.getText())){
+                        scrapedDataSet.add(data);
                     }
                 }
                 for (Element link : document.select("a[href]")) {
@@ -89,8 +85,7 @@ public class WebCrawler {
 
                     // Check that the link is allowed, has not been visited, and contains url
                     if (!visitedLinks.contains(nextLink) && isAllowed(nextLink, directivesMap.get(baseUrl)) && nextLink.contains(encodedUrl)) {
-                        System.out.println("Allowed Link: " + nextLink);
-
+                        System.out.println("Allowed link: " + nextLink);
                         // Only add the link to the queue if we are not yet at max depth
                         if (currentDepth < maxDepth - 1) {
                             queue.add(new UrlDepth(nextLink, currentDepth + 1));
@@ -104,14 +99,12 @@ public class WebCrawler {
         System.out.println("Crawling completed for thread " + threadId);
         System.out.printf("Thread %d score: %d\n", threadId, score);
     }
-    private Document request(String URL, Set<String> visitedLinks){
+    private Document request(String URL){
         try {
             Connection connection = Jsoup.connect(URL).userAgent("SentimentAnalyzerBot/1.0");
             Document document = connection.get();
             if (connection.response().statusCode() == 200){
-                System.out.println("Link: " + URL);
-                System.out.println(document.title());
-                visitedLinks.add(URL);
+                WebCrawler.visitedLinks.add(URL);
                 return document;
             }
         } catch (IOException e) {

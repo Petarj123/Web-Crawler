@@ -24,31 +24,32 @@ class ApplicationTests {
 	public void testCrawlWithValidUrlAndDepthShouldCrawlSuccessfullyMT() {
 		String url = "http://books.toscrape.com/";
 		int maxDepth = 100;
-		int numThreads = 12;
+		int numThreads = 50;
 
 		RobotstxtParser parser = new RobotstxtParser();
 		ScrapedDataRepository mockedRepository = Mockito.mock(ScrapedDataRepository.class);
 
-		ExecutorService executor = Executors.newFixedThreadPool(numThreads);
+		try (ExecutorService executor = Executors.newFixedThreadPool(numThreads)) {
 
-		for (int i = 0; i < numThreads; i++) {
-			int threadId = i;
+			for (int i = 0; i < numThreads; i++) {
+				int threadId = i;
 
-			executor.execute(() -> {
-				WebCrawler webCrawler = new WebCrawler(parser, mockedRepository);
-				webCrawler.crawl(url, maxDepth, threadId);
-			});
-		}
-
-		executor.shutdown();
-
-		try {
-			if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {  // Wait, but not forever
-				executor.shutdownNow();  // Cancel currently executing tasks
+				executor.execute(() -> {
+					WebCrawler webCrawler = new WebCrawler(parser, mockedRepository);
+					webCrawler.crawl(url, maxDepth, threadId);
+				});
 			}
-		} catch (InterruptedException ie) {
-			executor.shutdownNow();  // (Re-)Cancel if current thread also interrupted
-			Thread.currentThread().interrupt();  // Preserve interrupt status
+
+			executor.shutdown();
+
+			try {
+				if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {  // Wait, but not forever
+					executor.shutdownNow();  // Cancel currently executing tasks
+				}
+			} catch (InterruptedException ie) {
+				executor.shutdownNow();  // (Re-)Cancel if current thread also interrupted
+				Thread.currentThread().interrupt();  // Preserve interrupt status
+			}
 		}
 	}
 	@Test

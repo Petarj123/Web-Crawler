@@ -91,7 +91,7 @@ public class RobotstxtParser {
         }
 
         try {
-            URL = URL.replace("##", "#").replace(" ", "+");  // replace double hash symbols with a single one
+            URL = URL.replace("##", "#").replace(" ", "+").replace("|", "%7C");  // replace double hash symbols with a single one
             URL url = new URI(URL).toURL();
             return url.getProtocol() + "://" + url.getHost() + (url.getPort() == -1 ? "" : ":" + url.getPort()) + "/";
         } catch (URISyntaxException | MalformedURLException e) {
@@ -100,7 +100,24 @@ public class RobotstxtParser {
         return null;
     }
     public String cleanUrl(String url) {
-        return url.replace(" ", "+");
+        Map<Character, String> unsafeCharactersMap = new HashMap<>();
+        unsafeCharactersMap.put('{', "%7B");
+        unsafeCharactersMap.put('}', "%7D");
+        unsafeCharactersMap.put('|', "%7C");
+        unsafeCharactersMap.put('\\', "%5C");
+        unsafeCharactersMap.put('^', "%5E");
+        unsafeCharactersMap.put('~', "%7E");
+        unsafeCharactersMap.put('[', "%5B");
+        unsafeCharactersMap.put(']', "%5D");
+        unsafeCharactersMap.put('`', "%60");
+
+        char[] charArray = url.toCharArray();
+        for (char c : charArray) {
+            if (unsafeCharactersMap.containsKey(c)) {
+                url = url.replace(String.valueOf(c), unsafeCharactersMap.get(c));
+            }
+        }
+        return url;
     }
 
 }

@@ -7,4 +7,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ScrapedDataRepository extends MongoRepository<ScrapedData, String> {
     boolean existsByUrl(String currentUrl);
+
+    boolean existsByTitle(String title);
+
+    boolean existsByText(String text);
 }
