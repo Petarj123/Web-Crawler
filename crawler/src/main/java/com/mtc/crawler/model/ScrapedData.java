@@ -12,7 +12,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Document(collection = "sentiment")
+@Document(collection = "data")
 public class ScrapedData {
     @Id
     private String id;

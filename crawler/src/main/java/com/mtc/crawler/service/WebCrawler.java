@@ -25,9 +25,9 @@ public class WebCrawler {
     private static final Set<String> visitedLinks = Collections.synchronizedSet(new HashSet<>());
     private static final Set<ScrapedData> scrapedDataSet = Collections.synchronizedSet(new HashSet<>());
     private static final BlockingQueue<UrlDepth> queue = new LinkedBlockingQueue<>();
+
     public void start(String url, int maxDepth, int numThreads) {
         try (ExecutorService executor = Executors.newFixedThreadPool(numThreads)) {
-            // Create WebCrawler instances
             for (int i = 0; i < numThreads; i++) {
                 WebCrawler crawler = new WebCrawler(parser, scrapedDataRepository);
                 int finalI = i;
@@ -49,7 +49,6 @@ public class WebCrawler {
         }
 
         String encodedUrl = parser.cleanUrl(url);
-        System.out.println("Encoded url " + encodedUrl);
         String baseUrl = parser.getBaseUrl(encodedUrl);
         directivesMap.put(baseUrl, parser.parseRobotstxt(baseUrl));
 
@@ -70,12 +69,7 @@ public class WebCrawler {
                     paragraphText.append(paragraph.text()).append("\n");
                 }
                 if (!paragraphText.isEmpty()) {
-                    ScrapedData data = ScrapedData.builder()
-                            .url(currentUrl)
-                            .title(document.title())
-                            .text(paragraphText.toString())
-                            .scrapedAt(new Date())
-                            .build();
+                    ScrapedData data = createScrapedData(currentUrl, document.title(), paragraphText.toString());
                     if (!scrapedDataSet.contains(data)) {
                         synchronized (scrapedDataSet) {
                             scrapedDataSet.add(data);
@@ -84,7 +78,6 @@ public class WebCrawler {
                 }
                 for (Element link : document.select("a[href]")) {
                     String nextLink = link.absUrl("href");
-
                     // Check that the link is allowed, has not been visited, and contains url
                     if (!visitedLinks.contains(nextLink) && isAllowed(nextLink, directivesMap.get(baseUrl)) && nextLink.contains(encodedUrl)) {
                         System.out.println("Allowed link: " + nextLink);
@@ -103,7 +96,7 @@ public class WebCrawler {
     }
     private Document request(String URL){
         try {
-            Connection connection = Jsoup.connect(URL).userAgent("SentimentAnalyzerBot/1.0");
+            Connection connection = Jsoup.connect(URL).userAgent("AnalyzerBot/1.0");
             Document document = connection.get();
             if (connection.response().statusCode() == 200){
                 WebCrawler.visitedLinks.add(URL);
@@ -143,5 +136,13 @@ public class WebCrawler {
 
         // If no directives are found, it's generally safe to crawl.
         return true;
+    }
+    private ScrapedData createScrapedData(String url, String title, String text){
+        return ScrapedData.builder()
+              .url(url)
+              .title(title)
+              .text(text)
+              .scrapedAt(new Date())
+              .build();
     }
 }
