@@ -36,8 +36,8 @@ public class UserAgentGenerator {
     }
     private String getRandomVersion() {
         Random random = new Random();
-        int majorVersion = random.nextInt(20) + 1; // Random major version between 1 and 20
-        int minorVersion = random.nextInt(10); // Random minor version between 0 and 9
+        int majorVersion = random.nextInt(20) + 1;
+        int minorVersion = random.nextInt(10);
         return majorVersion + "." + minorVersion;
     }
 }

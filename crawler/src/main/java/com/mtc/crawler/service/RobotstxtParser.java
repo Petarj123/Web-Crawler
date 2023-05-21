@@ -78,7 +78,6 @@ public class RobotstxtParser {
                 lines.add(inputLine);
             in.close();
         } catch (IOException e) {
-            // robots.txt does not exist for this URL
             return null;
         }
 
@@ -91,7 +90,7 @@ public class RobotstxtParser {
         }
 
         try {
-            URL = URL.replace("##", "#").replace(" ", "+").replace("|", "%7C");  // replace double hash symbols with a single one
+            URL = URL.replace("##", "#").replace(" ", "+").replace("|", "%7C");
             URL url = new URI(URL).toURL();
             return url.getProtocol() + "://" + url.getHost() + (url.getPort() == -1 ? "" : ":" + url.getPort()) + "/";
         } catch (URISyntaxException | MalformedURLException e) {
