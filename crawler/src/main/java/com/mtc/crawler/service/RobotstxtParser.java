@@ -90,8 +90,7 @@ public class RobotstxtParser {
         }
 
         try {
-            URL = URL.replace("##", "#").replace(" ", "+").replace("|", "%7C");
-            URL url = new URI(URL).toURL();
+            URL url = new URI(cleanUrl(URL)).toURL();
             return url.getProtocol() + "://" + url.getHost() + (url.getPort() == -1 ? "" : ":" + url.getPort()) + "/";
         } catch (URISyntaxException | MalformedURLException e) {
             e.printStackTrace();
