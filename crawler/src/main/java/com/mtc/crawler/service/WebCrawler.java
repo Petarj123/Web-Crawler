@@ -20,8 +20,9 @@ import java.util.concurrent.*;
 @RequiredArgsConstructor
 public class WebCrawler {
     private final RobotstxtParser parser;
-    private final Map<String, Map<String, Set<String>>> directivesMap = new HashMap<>();
     private final ScrapedDataRepository scrapedDataRepository;
+    private final UserAgentGenerator userAgentGenerator;
+    private final Map<String, Map<String, Set<String>>> directivesMap = new HashMap<>();
     private static final Set<String> visitedLinks = Collections.synchronizedSet(new HashSet<>());
     private static final Set<ScrapedData> scrapedDataSet = Collections.synchronizedSet(new HashSet<>());
     private static final BlockingQueue<UrlDepth> queue = new LinkedBlockingQueue<>();
@@ -29,7 +30,7 @@ public class WebCrawler {
     public void start(String url, int maxDepth, int numThreads) {
         try (ExecutorService executor = Executors.newFixedThreadPool(numThreads)) {
             for (int i = 0; i < numThreads; i++) {
-                WebCrawler crawler = new WebCrawler(parser, scrapedDataRepository);
+                WebCrawler crawler = new WebCrawler(parser, scrapedDataRepository, userAgentGenerator);
                 int finalI = i;
                 executor.execute(() -> crawler.crawl(url, maxDepth, finalI));
             }
@@ -53,7 +54,9 @@ public class WebCrawler {
         directivesMap.put(baseUrl, parser.parseRobotstxt(baseUrl));
 
         int delay = parser.crawlDelay(baseUrl + "/robots.txt");
-        int score = 0;
+        int visitedUrls = 0;
+        int totalResponseTime = 0;
+
         queue.add(new UrlDepth(encodedUrl, 0));
 
         while (!queue.isEmpty()) {
@@ -62,7 +65,10 @@ public class WebCrawler {
             int currentDepth = urlDepth.getDepth();
 
             Thread.sleep(delay * 1000L);
+            long startTime = System.currentTimeMillis();
             Document document = request(currentUrl);
+            long endTime = System.currentTimeMillis();
+            totalResponseTime += (endTime - startTime);
             if (document != null) {
                 StringBuilder paragraphText = new StringBuilder();
                 for (Element paragraph : document.select("p")) {
@@ -86,17 +92,20 @@ public class WebCrawler {
                             queue.add(new UrlDepth(nextLink, currentDepth + 1));
                         }
                         visitedLinks.add(nextLink);
-                        score++;
+                        visitedUrls++;
                     }
                 }
             }
         }
-        System.out.println("Crawling completed for thread " + threadId);
-        System.out.printf("Thread %d score: %d\n", threadId, score);
+        System.out.println("Crawler " + threadId);
+        System.out.println("Visited URLs: " + visitedUrls);
+        System.out.println("Average Response Time: " + (totalResponseTime / visitedUrls) + " ms");
+
     }
     private Document request(String URL){
+        String userAgent = userAgentGenerator.generateRandomUserAgent();
         try {
-            Connection connection = Jsoup.connect(URL).userAgent("AnalyzerBot/1.0");
+            Connection connection = Jsoup.connect(URL).userAgent(userAgent);
             Document document = connection.get();
             if (connection.response().statusCode() == 200){
                 WebCrawler.visitedLinks.add(URL);
