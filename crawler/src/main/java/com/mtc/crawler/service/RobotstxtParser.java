@@ -108,6 +108,7 @@ public class RobotstxtParser {
         unsafeCharactersMap.put('[', "%5B");
         unsafeCharactersMap.put(']', "%5D");
         unsafeCharactersMap.put('`', "%60");
+        unsafeCharactersMap.put(' ', "%20");
 
         char[] charArray = url.toCharArray();
         for (char c : charArray) {
