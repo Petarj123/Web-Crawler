@@ -8,4 +8,5 @@ import lombok.Data;
 public class UrlDepth {
     private String url;
     private int depth;
+    private String referenceUrl;
 }

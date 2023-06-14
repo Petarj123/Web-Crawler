@@ -50,6 +50,7 @@ public class WebCrawler {
         }
 
         String encodedUrl = parser.cleanUrl(url);
+        System.out.println("Encoded url: " + encodedUrl);
         String baseUrl = parser.getBaseUrl(encodedUrl);
         directivesMap.put(baseUrl, parser.parseRobotstxt(baseUrl));
 
@@ -57,12 +58,13 @@ public class WebCrawler {
         int visitedUrls = 0;
         int totalResponseTime = 0;
 
-        queue.add(new UrlDepth(encodedUrl, 0));
+        queue.add(new UrlDepth(encodedUrl, 0, baseUrl));
 
         while (!queue.isEmpty()) {
             UrlDepth urlDepth = queue.poll();
             String currentUrl = urlDepth.getUrl();
             int currentDepth = urlDepth.getDepth();
+            String referenceUrl = urlDepth.getReferenceUrl();
 
             Thread.sleep(delay * 1000L);
             long startTime = System.currentTimeMillis();
@@ -84,12 +86,12 @@ public class WebCrawler {
                 }
                 for (Element link : document.select("a[href]")) {
                     String nextLink = link.absUrl("href");
-                    // Check that the link is allowed, has not been visited, and contains url
-                    if (!visitedLinks.contains(nextLink) && isAllowed(nextLink, directivesMap.get(baseUrl)) && nextLink.contains(encodedUrl)) {
+                    // Check that the link is allowed, has not been visited, and starts with the base URL
+                    if (!visitedLinks.contains(nextLink) && isAllowed(nextLink, directivesMap.get(baseUrl)) && nextLink.startsWith(referenceUrl)) {
                         System.out.println("Allowed link: " + nextLink);
                         // Only add the link to the queue if we are not yet at max depth
                         if (currentDepth < maxDepth - 1) {
-                            queue.add(new UrlDepth(nextLink, currentDepth + 1));
+                            queue.add(new UrlDepth(nextLink, currentDepth + 1, referenceUrl));
                         }
                         visitedLinks.add(nextLink);
                         visitedUrls++;
@@ -100,8 +102,8 @@ public class WebCrawler {
         System.out.println("Crawler " + threadId);
         System.out.println("Visited URLs: " + visitedUrls);
         System.out.println("Average Response Time: " + (totalResponseTime / visitedUrls) + " ms");
-
     }
+
     private Document request(String URL){
         String userAgent = userAgentGenerator.generateRandomUserAgent();
         try {
