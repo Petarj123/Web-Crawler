@@ -2,6 +2,7 @@ package com.mtc.crawler;
 
 import com.mtc.crawler.repository.ScrapedDataRepository;
 import com.mtc.crawler.service.RobotstxtParser;
+import com.mtc.crawler.service.UserAgentGenerator;
 import com.mtc.crawler.service.WebCrawler;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -28,14 +29,14 @@ class ApplicationTests {
 
 		RobotstxtParser parser = new RobotstxtParser();
 		ScrapedDataRepository mockedRepository = Mockito.mock(ScrapedDataRepository.class);
-
+        UserAgentGenerator agentGenerator = new UserAgentGenerator();
 		try (ExecutorService executor = Executors.newFixedThreadPool(numThreads)) {
 
 			for (int i = 0; i < numThreads; i++) {
 				int threadId = i;
 
 				executor.execute(() -> {
-					WebCrawler webCrawler = new WebCrawler(parser, mockedRepository);
+					WebCrawler webCrawler = new WebCrawler(parser, mockedRepository, agentGenerator);
 					webCrawler.crawl(url, maxDepth, threadId);
 				});
 			}
@@ -55,16 +56,16 @@ class ApplicationTests {
 	@Test
 	public void testCrawlWithValidUrlAndDepthShouldCrawlSuccessfully() {
 		String url = "http://books.toscrape.com/";
-		int maxDepth = 100;
+		int maxDepth = 10;
 		RobotstxtParser parser = new RobotstxtParser();
 		ScrapedDataRepository mockedRepository = Mockito.mock(ScrapedDataRepository.class);
-
-		WebCrawler webCrawler = new WebCrawler(parser, mockedRepository);
+        UserAgentGenerator agentGenerator = new UserAgentGenerator();
+		WebCrawler webCrawler = new WebCrawler(parser, mockedRepository, agentGenerator);
 
 		System.out.println(url);
 		System.out.println(maxDepth);
 
-		webCrawler.crawl(url, maxDepth, 12);
+		webCrawler.start(url, maxDepth, 12);
 	}
 	@Test
 	public void testCrawlerWithIncorrectUrl(){
@@ -81,7 +82,7 @@ class ApplicationTests {
 		String expectedMessage = "Cannot invoke \"com.mtc.crawler.service.WebCrawler.crawl(String, int)\" because \"this.webCrawler\" is null";
 
 		Exception exception = assertThrows(RuntimeException.class, () -> {
-			webCrawler.crawl(url, maxDepth, 12);
+			webCrawler.start(url, maxDepth, 12);
 		});
 		assertEquals(expectedMessage, exception.getMessage());
 	}
