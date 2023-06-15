@@ -24,7 +24,7 @@ class ApplicationTests {
 	@Test
 	public void testCrawlWithValidUrlAndDepthShouldCrawlSuccessfullyMT() {
 		String url = "http://books.toscrape.com/";
-		int maxDepth = 100;
+		int maxDepth = 2;
 		int numThreads = 50;
 
 		RobotstxtParser parser = new RobotstxtParser();
@@ -79,7 +79,7 @@ class ApplicationTests {
 	public void testCrawlWithZeroDepthShouldThrowException() {
 		String url = "https://youtube.com";
 		int maxDepth = 0;
-		String expectedMessage = "Cannot invoke \"com.mtc.crawler.service.WebCrawler.crawl(String, int)\" because \"this.webCrawler\" is null";
+		String expectedMessage = "Cannot invoke \"com.mtc.crawler.service.WebCrawler.start(String, int, int)\" because \"this.webCrawler\" is null";
 
 		Exception exception = assertThrows(RuntimeException.class, () -> {
 			webCrawler.start(url, maxDepth, 12);

@@ -14,6 +14,19 @@ import java.util.*;
 
 @Component
 public class RobotstxtParser {
+    private static final Map<Character, String> UNSAFE_CHARACTERS_MAP = new HashMap<>();
+    static {
+        UNSAFE_CHARACTERS_MAP.put('{', "%7B");
+        UNSAFE_CHARACTERS_MAP.put('}', "%7D");
+        UNSAFE_CHARACTERS_MAP.put('|', "%7C");
+        UNSAFE_CHARACTERS_MAP.put('\\', "%5C");
+        UNSAFE_CHARACTERS_MAP.put('^', "%5E");
+        UNSAFE_CHARACTERS_MAP.put('~', "%7E");
+        UNSAFE_CHARACTERS_MAP.put('[', "%5B");
+        UNSAFE_CHARACTERS_MAP.put(']', "%5D");
+        UNSAFE_CHARACTERS_MAP.put('`', "%60");
+        UNSAFE_CHARACTERS_MAP.put(' ', "%20");
+    }
 
     @SneakyThrows
     public Map<String, Set<String>> parseRobotstxt(String url){
@@ -98,25 +111,15 @@ public class RobotstxtParser {
         return null;
     }
     public String cleanUrl(String url) {
-        Map<Character, String> unsafeCharactersMap = new HashMap<>();
-        unsafeCharactersMap.put('{', "%7B");
-        unsafeCharactersMap.put('}', "%7D");
-        unsafeCharactersMap.put('|', "%7C");
-        unsafeCharactersMap.put('\\', "%5C");
-        unsafeCharactersMap.put('^', "%5E");
-        unsafeCharactersMap.put('~', "%7E");
-        unsafeCharactersMap.put('[', "%5B");
-        unsafeCharactersMap.put(']', "%5D");
-        unsafeCharactersMap.put('`', "%60");
-        unsafeCharactersMap.put(' ', "%20");
-
-        char[] charArray = url.toCharArray();
-        for (char c : charArray) {
-            if (unsafeCharactersMap.containsKey(c)) {
-                url = url.replace(String.valueOf(c), unsafeCharactersMap.get(c));
+        StringBuilder cleanedUrl = new StringBuilder(url.length());
+        for (char c : url.toCharArray()) {
+            String replacement = UNSAFE_CHARACTERS_MAP.get(c);
+            if (replacement != null) {
+                cleanedUrl.append(replacement);
+            } else {
+                cleanedUrl.append(c);
             }
         }
-        return url;
+        return cleanedUrl.toString();
     }
-
 }

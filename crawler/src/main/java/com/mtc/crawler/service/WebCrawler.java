@@ -14,10 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.*;
 
 @Service
 @RequiredArgsConstructor
@@ -25,20 +22,20 @@ public class WebCrawler {
     private final RobotstxtParser parser;
     private final ScrapedDataRepository scrapedDataRepository;
     private final UserAgentGenerator userAgentGenerator;
-    private final Map<String, Map<String, Set<String>>> directivesMap = new HashMap<>();
-    private static final Set<String> visitedLinks = Collections.synchronizedSet(new HashSet<>());
-    private static final Set<ScrapedData> scrapedDataSet = Collections.synchronizedSet(new HashSet<>());
-    private static final BlockingQueue<UrlDepth> queue = new LinkedBlockingQueue<>();
-
+    private final Map<String, Map<String, Set<String>>> directivesMap = new ConcurrentHashMap<>();
+    private static final Set<String> visitedLinks = Collections.newSetFromMap(new ConcurrentHashMap<>());
+    private final Set<ScrapedData> scrapedDataSet = Collections.newSetFromMap(new ConcurrentHashMap<>());
+    private final BlockingQueue<UrlDepth> queue = new LinkedBlockingQueue<>();
     public void start(String url, int maxDepth, int numThreads) {
         try (ExecutorService executor = Executors.newFixedThreadPool(numThreads)) {
             for (int i = 0; i < numThreads; i++) {
-                WebCrawler crawler = new WebCrawler(parser, scrapedDataRepository, userAgentGenerator);
                 int finalI = i;
-                executor.execute(() -> crawler.crawl(url, maxDepth, finalI));
+                executor.execute(() -> crawl(url, maxDepth, finalI));
             }
-
             executor.shutdown();
+            executor.awaitTermination(Long.MAX_VALUE, TimeUnit.MILLISECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         scrapedDataRepository.saveAll(scrapedDataSet);
         visitedLinks.clear();

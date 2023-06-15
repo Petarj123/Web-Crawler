@@ -21,10 +21,9 @@ public class UserAgentGenerator {
             " AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36 Edg/94.0.992.50",
             " AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36"
     };
+    private final Random random = new Random();
     public String generateRandomUserAgent() {
         List<String> userAgents = new ArrayList<>();
-        Random random = new Random();
-
         for (int i = 0; i < 10; i++) {
             String prefix = AGENT_PREFIXES[random.nextInt(AGENT_PREFIXES.length)];
             String suffix = AGENT_SUFFIXES[random.nextInt(AGENT_SUFFIXES.length)];
@@ -35,7 +34,6 @@ public class UserAgentGenerator {
         return userAgents.get(randomIndex);
     }
     private String getRandomVersion() {
-        Random random = new Random();
         int majorVersion = random.nextInt(20) + 1;
         int minorVersion = random.nextInt(10);
         return majorVersion + "." + minorVersion;
