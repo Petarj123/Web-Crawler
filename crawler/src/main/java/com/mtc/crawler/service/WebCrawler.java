@@ -88,7 +88,6 @@ public class WebCrawler {
                     // Check that the link is allowed, has not been visited, and is from the same domain
                     if (!visitedLinks.contains(nextLink) && isAllowed(nextLink, directivesMap.get(baseUrl)) && isSameDomain(nextLink, baseUrl)) {
                         System.out.println("Allowed link: " + nextLink);
-                        // Only add the link to the queue if we are not yet at max depth
                         if (currentDepth < maxDepth - 1) {
                             queue.add(new UrlDepth(nextLink, currentDepth + 1, referenceUrl));
                         }
