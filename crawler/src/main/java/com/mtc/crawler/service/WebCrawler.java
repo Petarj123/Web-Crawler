@@ -13,6 +13,8 @@ import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.*;
 import java.util.concurrent.*;
 
@@ -33,9 +35,6 @@ public class WebCrawler {
                 executor.execute(() -> crawl(url, maxDepth, finalI));
             }
             executor.shutdown();
-            executor.awaitTermination(Long.MAX_VALUE, TimeUnit.MILLISECONDS);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
         scrapedDataRepository.saveAll(scrapedDataSet);
         visitedLinks.clear();
@@ -86,8 +85,8 @@ public class WebCrawler {
                 }
                 for (Element link : document.select("a[href]")) {
                     String nextLink = link.absUrl("href");
-                    // Check that the link is allowed, has not been visited, and starts with the base URL
-                    if (!visitedLinks.contains(nextLink) && isAllowed(nextLink, directivesMap.get(baseUrl)) && nextLink.startsWith(referenceUrl)) {
+                    // Check that the link is allowed, has not been visited, and is from the same domain
+                    if (!visitedLinks.contains(nextLink) && isAllowed(nextLink, directivesMap.get(baseUrl)) && isSameDomain(nextLink, baseUrl)) {
                         System.out.println("Allowed link: " + nextLink);
                         // Only add the link to the queue if we are not yet at max depth
                         if (currentDepth < maxDepth - 1) {
@@ -104,6 +103,18 @@ public class WebCrawler {
         System.out.println("Average Response Time: " + (totalResponseTime / visitedUrls) + " ms");
     }
 
+    private boolean isSameDomain(String url1, String url2) {
+        try {
+            URI uri1 = new URI(url1);
+            URI uri2 = new URI(url2);
+            String host1 = uri1.getHost();
+            String host2 = uri2.getHost();
+            return host1 != null && host1.equals(host2);
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
     private Document request(String URL){
         String userAgent = userAgentGenerator.generateRandomUserAgent();
         try {
@@ -125,8 +136,7 @@ public class WebCrawler {
             return false;
         }
         String path = url.replace(baseUrl, "");
-
-        // Deny has priority over allow.
+        
         Set<String> disallowedPaths = directives.get("Disallow");
         if (disallowedPaths != null) {
             for (String disallowedPath : disallowedPaths) {
@@ -145,7 +155,6 @@ public class WebCrawler {
             }
         }
 
-        // If no directives are found, it's generally safe to crawl.
         return true;
     }
     private ScrapedData createScrapedData(String url, String title, String text){
